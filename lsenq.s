@@ -29,6 +29,7 @@ GO       DS    0H
          USING PARMS,R9_32
          LARL  R15_32,DO_OCTAL
          LARL  R15_32,DO_HEX  
+         LARL  R15_32,DO_DOT  
          ST    R15_32,ENCODE@
          LA    R1_32,CALLX
          L     R15_32,CEE3INF
@@ -103,18 +104,10 @@ DORNAME  DS    0H
          ST    R5_32,RNAME_LEN
          BCTR  R5_32,0            DECREMENT BY 1
          EX    R5_32,CP_RNAME
-*        CHI   R2_32,2            QNAME SPECIFIED?
-*        JNE   OK1                YES, ALREADY DONE
-*        MVI   CONTENTION,1
-*        CLC   =X'839695A38595A389969500',0(R6_32)
-*        JE    OK1
-*        MVI   CONTENTION,0
 *
 * FOR CONVIENCE, I WILL FORCE RNAMES TO UPPER CASE IF    
 * THE QNAME IS DEFAULTED TO SYSDSN
-*        CLC   QNAME,=CL8'SYSDSN'
-*        JNE   OK1
-         CHI   R2_32,2
+         CLC   QNAME,=CL8'SYSDSN'
          JNE   OK1
          L     R5_32,RNAME_LEN
          BCTR  R5_32,0
@@ -368,6 +361,28 @@ BADPARMS DS    0H
 DO_ENCODE DS   0H
          L     R15_32,ENCODE@
          BR    R15_32
+DO_DOT   DS    0H
+         STM   R14_32,R12_32,12(R13_32)
+         CHI   R9_32,255
+         JH    *+2
+         LA    R1_32,PRNTABLE     POINT TO PRINT TABLE
+         SLR   R0_32,R0_32        TEST CHAR IS X'00'
+D_TROO   TROO  R8_32,R10_32,0     MOVE AND TEST
+         JO    D_TROO             LOOP ON CC=3
+         JE    D_TROOE            FINISHED!
+*
+* TRANSLATE TO A PERIOD   
+         MVI   0(R8_32),C'.'     
+         LA    R10_32,1(,R10_32)
+         LA    R8_32,1(,R8_32)
+         LA    R1_32,PRNTABLE
+         BCTR  R9_32,0
+         LTR   R9_32,R9_32
+         JP    D_TROO
+D_TROOE  DS    0H
+         ST    R8_32,8*4+20(,R13_32)
+         LM    R14_32,R12_32,12(R13_32) 
+         BR    R14_32
 DO_HEX   DS    0H
          STM   R14_32,R12_32,12(R13_32)
          CHI   R9_32,255
@@ -431,6 +446,7 @@ O_TROOE  DS    0H
          LM    R14_32,R12_32,12(R13_32) 
          BR    R14_32
 STORAGE_LENGTH DC A(4*1024*1024)
+SYSDSN   DC    CL6'SYSDSN',X'00'
 FD1      DC    F'1'
 FD2      DC    F'2'
 ALET     DC    A(0)
@@ -461,9 +477,16 @@ TOUPPER  DC    256AL1(*-TOUPPER)
 PRNTABLE PRNTABLE abcdefghijklmnopqrstuvwxyz  
 PRNTABLE PRNTABLE ABCDEFGHIJKLMNOPQRSTUVWXYZ  
 PRNTABLE PRNTABLE 0123456789                  
-PRNTABLE PRNTABLE -_.+=()@#$
-*        ORG   PRNTABLE+C' '
-*        DC    C' '
+PRNTABLE PRNTABLE `~!@#$%¬*()_+-=    
+PRNTABLE PRNTABLE []\{}|;"./<>?     
+         ORG   PRNTABLE+C' '
+         DC    C' '
+         ORG   PRNTABLE+C','
+         DC    C','
+         ORG   PRNTABLE+C''''
+         DC    C''''
+         ORG   PRNTABLE+C'&&'
+         DC    C'&&'
          ORG
          ISGQUERY MF=(L,GQPARM)                                         
          LTORG *
@@ -484,6 +507,10 @@ LSENQ_PPA CEEPPA LIBRARY=NO,                                           X
 * DYNAMIC AREA IS DEFINED HERE.
 * THIS IS WITHIN A DSECT, SO NO DATA IS REALLY INITIALIZED
          DS    0D                 FORCE DOUBLEWORD
+QNAME@   DS    A
+QNAMEL   DS    F
+RNAME@   DS    A
+RNAMEL   DS    F
 NL_CATD  DS    A
 ENCODE@  DS    A
 D_RC     DS    D
@@ -499,8 +526,10 @@ BUFFERA  DS    A
 RETVAL   DS    A(0)
 RETCODE  DS    A(0)
 RSNCODE  DS    A(0)
-QNAME@   DS    A
-RNAME@   DS    A
+PARM1@   DS    A
+PARM1L   DS    F
+PARM2@   DS    A
+PARM2L   DS    F
 SYS      DS    F
 * BIT MEANING
 *    0 X'80'
