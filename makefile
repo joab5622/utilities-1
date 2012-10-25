@@ -1,1 +1,295 @@
-{@ãˆ…@•”…@–†@£ˆ…@©aÖâ@×Äâ@£–@™…ƒ…‰¥…@£ˆ…@—§Ké@†‰“…ÄÉâã@~@aaäÕÉçKâÖäÙÃÅMäãÉÓ×Áçé]{@ãˆ…@©aÁ™ƒˆ‰£…ƒ£¤™…@”ƒˆ‰•…@“…¥…“K@éâ`ó@‰¢@†–™@™…“£‰¥…N‰””…„‰£…N“–•‡@„‰¢—“ƒ…”…•£k{@““@–†@¦ˆ‰ƒˆ@™…@¤¢…„@‰•@£ˆ…@ƒ–„…K@ãˆ‰¢@”…•¢@£ˆ‰¢@¦‰““@•–£@™¤•@–•@@•¨£ˆ‰•‡@“…¢¢{@£ˆ•@@©ùKÔÁÃÈÉÕÅ~éâÅÙÉÅâ`óÔÁÃÙÖâ@~@Óã@ÆÉÕÄäÃÂ×ÁÓÓÆÉÓÅâ~”’…†‰“…âÃÙÉ×ãâmâÙÃ~@”’‘ƒ“K¢ˆ@”’„¢•K™…§§@™”„¢•K™…§§âÃÙÉ×ãâ~[MâÃÙÉ×ãâmâÙÃz‚]ÁÓÓÆÉÓÅâN~[MâÃÙÉ×ãâmâÙÃ]@[MâÃÙÉ×ãâ]ÆÉÓÅâ@~@@ÆÉÕÄäÃÂ×@äÃÂâÃÁÕ×@ÙÅÇâ@×ÙÕãÁÂÓÅ@‰…†‚™ñôK‘ƒ“ÁÓÓÆÉÓÅâN~[MÆÉÓÅâ]Á×Æ@~@”¢@¤¤„‰£@”‡ƒ™…@”ƒ¢–—…™ÄÓÓâ@~@ÄÓÓ`£…”—“£…K„““@‰¢‡˜¤…™¨K„““@†‰•„¤ƒ‚¢K„““@“¢—ƒ…K„““@“¥£–ƒK„““@¤ƒ‚¢ƒ•K„““@—™„¢„K„““ÁÓÓÆÉÓÅâN~[MÄÓÓâ]ÄÓÓmâÉÄÅmÆÉÓÅâ@N~@[MÄÓÓâz„““~§]ÁÓÓÆÉÓÅâN~[MÄÓÓmâÉÄÅmÆÉÓÅâ]×ÙÖÇÙÁÔâ@~@“¢…•˜@¢¤‚‘–‚@†£……@@„…‚“–ƒ’@™”‘…¢@†“–¦„™¥™@¤•‰§“–‡ÁÓÓÆÉÓÅâN~[M×ÙÖÇÙÁÔâ]âäÂÙÖäãÉÕÅâ@~@¢£–™‡™¤—[ÖÁÓÓÆÉÓÅâN~[MâäÂÙÖäãÉÕÅâ]ÔÁÕÆÉÓÅñ~[M×ÙÖÇÙÁÔâz‚zNK”•ñ]@[M×ÙÖÇÙÁÔâz‚zNKƒ£ñ]{[M×ÙÖÇÙÁÔâz‚z_”•a”•ñazNKñ]@[M×ÙÖÇÙÁÔâz‚z_”•aƒ£ñazNKñ]ÁÓÓÆÉÓÅâN~[MÔÁÕÆÉÓÅñ]ÔÁÕÆÉÓÅó~[MâäÂÙÖäãÉÕÅâz‚zNK”•ó]@[MâäÂÙÖäãÉÕÅâz‚zNKƒ£ó]{[M×ÙÖÇÙÁÔâz‚z_”•a”•óazNKó]@[M×ÙÖÇÙÁÔâz‚z_”•aƒ£óazNKó]ÁÓÓÆÉÓÅâN~[MÔÁÕÆÉÓÅó]â×ÅÃ×ÇÔâ@~@“¢„¢„{ÁÓÓÆÉÓÅâN~[Mâ×ÅÃ×ÇÔâ]ãÅÔ×ÓÁãÅâ@~@âÒÅÓÅãÖÕK™…§§@âÒÅÓÅãÖÕK¢@âÒÅÓÅãÖÕK¢ˆ@âÒÅÓÅãÖÕK—“@âÒÅÓÅãÖÕK¦’ÁÓÓÆÉÓÅâN~[MãÅÔ×ÓÁãÅâ]×ÙÅÆÉç~a¤¢™a“–ƒ“ÂÉÕÄÉÙ~[M×ÙÅÆÉç]a‚‰•ÔÁÕÄÉÙ~[M×ÙÅÆÉç]a”•ÄÓÓÄÉÙ~[M×ÙÅÆÉç]a“‰‚ÓÄmÓÉÂâ@N~@`Ó@KÓÄmÓÉÂâ@N~@`“@¤£‰“‰£‰…¢`ñÓÄmÓÉÂâ@N~@`“@aa}ÃÅÅKâÃÅÅÓÒÅÄ}ÓÄmÓÉÂâ@N~@`“@aa}âèâñKÃââÓÉÂ}ÓÄmÄÓÓ@~@`‚@ÄèÕÁÔàMÄÓÓà]kÃÁâÅàMÔÉçÅÄà]kÙÅÕãkÙÅäâÓÄmÖ×ãâ@N~@[MÓÄÆÓÁÇâ]ÓÄmÁÙÇâ@N~Áâ~¢ÓÄ~“„{ÁâmÓÉÂâ@N~@`É@aˆ–”…a£¢ˆððùa¢–¤™ƒ…a”ƒ“‰‚{âmÓÉÂâ@~@`É@ãâÈððùKâÖäÙÃÅKÔÁÃÓÉÂÁâmÓÉÂâ@N~@`É@KÁâmÓÉÂâ@N~@`É@ÁâÔKâÁâÔÔÁÃòÁâmÓÉÂâ@N~@`É@ÁâÔKâÁâÔÔÁÃñÁâmÓÉÂâ@N~@`É@ÃÅÅKâÃÅÅÔÁÃÁâmÓÉÂâ@N~@`É@âèâóKãÄÆKåñÙñÔðKâÁÔ×ÓÉÂKÓÉÈãÁâmÖ×ãâ@N~@``‡„£@``‡„¦™†ó@`”ÇÖÆÆÁâmÄÓÓ@N~@`”ÇÖÆÆÁâmÓÉâã@N~@`~[\K“¢£×ÙÅÙÅØK“¢…•˜@~@}†‰•„¤ƒ‚¢K§}KâäÆÆÉçÅâz@K¢@K–@K““@z@„““@[MâäÂÙÖäãÉÕÅâ]@[M×ÙÖÇÙÁÔâ]@@[MâÃÙÉ×ãâ]@[Mâ×ÅÃ×ÇÔâ]£–¤ƒˆ@““[MÔÁÃÙÖâ]z@^@{@Ä–•}£@•……„@£–@„–@•¨£ˆ‰•‡@†–™@”ƒ™–¢KlK–@z@lKƒ|…ƒˆ–@”’‰•‡@[|@†™–”@[P{@ãˆ…@†–““–¦‰•‡@K”•o@•„@Kƒ£o@ƒ™…£…@£ˆ…@£…”—“£…¢{@†–™@£ˆ…@¥™‰–¤¢@”•@†‰“…¢K{@ãˆ…@¢¤††‰§@ñKKù@™…@†–™@£ˆ…@¥™‰–¤¢@¢…ƒ£‰–•¢z{@ñ@`@ƒ–””•„¢{@ò@`@¢¨¢£…”@ƒ““¢@M¢¤——“‰…„@‚¨@©aäÕÉç]@`@•–£@†–™@¤¢…™¢{@ó@`@Ó‰‚™™¨@ƒ““¢@M†–™@¢¤‚™–¤£‰•…¢@¢¤——“‰…„@‰•@“‰‚™™‰…¢]{@ô@`@â—…ƒ‰“@†‰“…¢@M¢¤ƒˆ@¢@ƒ–•†‰‡¤™£‰–•@†‰“…¢]{@õ@`@†‰“…@†–™”£¢@•„@ƒ–•¥…•£‰–•¢{@ö@`@Ç”…¢{@÷@`@Ô‰¢ƒ…““•…–¤¢@M¢¤ƒˆ@¢@”ƒ™–¢k@ƒ–—¨‚––’¢]{@ø@`@â¨¢£…”@Á„”‰•@Ã–””•„¢{@ù@`@Ò…™•…“@Ù–¤£‰•…¢{{@Ö†@ƒ–¤™¢…k@£ˆ‰¢@¢¨¢£…”@„–…¢@•–£@¢¤——“¨@““@–†@£ˆ…¢…K{@É@–•“¨@—¤£@““@–†@£ˆ…”@‰•@†–™@ƒ–”—“…£…•…¢¢KlK”•ñ@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•ña[\Kñƒ„@”•a”•ñ^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKñ@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kñ^àƒ„@`^à“•@`¢@”•a”•ña[\Kñ@[|lK”•ò@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•òa[\Kòƒ„@”•a”•ò^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKò@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kò^àƒ„@`^à“•@`¢@”•a”•òa[\Kò@[|lK”•ó@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•óa[\Kóƒ„@”•a”•ó^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKó@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kó^àƒ„@`^à“•@`¢@”•a”•óa[\Kó@[|lK”•ô@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•ôa[\Kôƒ„@”•a”•ô^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKô@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kô^àƒ„@`^à“•@`¢@”•a”•ôa[\Kô@[|lK”•õ@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•õa[\Kõƒ„@”•a”•õ^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKõ@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kõ^àƒ„@`^à“•@`¢@”•a”•õa[\Kõ@[|lK”•ö@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•öa[\Köƒ„@”•a”•ö^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKö@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kö^àƒ„@`^à“•@`¢@”•a”•öa[\Kö@[|lK”•÷@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•÷a[\K÷ƒ„@”•a”•÷^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕK÷@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\K÷^àƒ„@`^à“•@`¢@”•a”•÷a[\K÷@[|lK”•ø@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•øa[\Køƒ„@”•a”•ø^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKø@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kø^àƒ„@`^à“•@`¢@”•a”•øa[\Kñ@[|lK”•ù@K×ÙÅÃÉÖäâ@z£…¢£@Z@`…@”•a”•ùa[\Kùƒ„@”•a”•ù^à¢…„@`Å@}¢a£…”—“£…a[\a‡}@âÒÅÓÅãÖÕKù@O@¢…„@`Å@}¢aãÅÔ×ÓÁãÅa[\a‡}@n[\Kù^àƒ„@`^à“•@`¢@”•a”•ùa[\Kù@[|lKƒ£ñ@z@lK”•ñ£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£ña[\Kñ“•@`¢@”•aƒ£ña[\Kñ@[|£–¤ƒˆ@`™@[P@[|lKƒ£ò@z@lK”•ò£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£òa[\Kò“•@`¢@”•aƒ£òa[\Kò@[|£–¤ƒˆ@`™@[P@[|lKƒ£ó@z@lK”•ó£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£óa[\Kó“•@`¢@”•aƒ£óa[\Kó@[|£–¤ƒˆ@`™@[P@[|lKƒ£ô@z@lK”•ô£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£ôa[\Kô“•@`¢@”•aƒ£ôa[\Kô@[|£–¤ƒˆ@`™@[P@[|lKƒ£õ@z@lK”•õ£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£õa[\Kõ“•@`¢@”•aƒ£õa[\Kõ@[|£–¤ƒˆ@`™@[P@[|lKƒ£ö@z@lK”•ö£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£öa[\Kö“•@`¢@”•aƒ£öa[\Kö@[|£–¤ƒˆ@`™@[P@[|lKƒ£÷@z@lK”•÷£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£÷a[\K÷“•@`¢@”•aƒ£÷a[\K÷@[|£–¤ƒˆ@`™@[P@[|lKƒ£ø@z@lK”•ø£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£øa[\Kø“•@`¢@”•aƒ£øa[\Kø@[|£–¤ƒˆ@`™@[P@[|lKƒ£ù@z@lK”•ù£…¢£@Z@`…@[|£–¤ƒˆ@`™@[P@”•aƒ£ùa[\Kù“•@`¢@”•aƒ£ùa[\Kù@[|£–¤ƒˆ@`™@[P@[|”•@z@[MÔÁÕÆÉÓÅñ]@[MÔÁÕÆÉÓÅò]†–™@‰@‰•@ñ@ò@ó@ô@õ@ö@÷@ø@ù^„–@à@@ƒ„@”•a”•[[‰@^@à@@†–™@‘@‰•@\K[[‰^„–@à@@@@@@@@@@@@@@£–¤ƒˆ@`™†@[[‘@KKaƒ£[[‰a[[‘^@à@@„–•…@^@à@ƒ„@`@^@à„–•…£–¤ƒˆ@”•¢ƒ™‰—£¢@z@[MâÃÙÉ×ãâ]£–¤ƒˆ@¢ƒ™‰—£¢l@z@lK™…§§…ƒˆ–@}™¤“…@lKl™…§§z@”’‰•‡@[|@†™–”@[L}ƒ—@`¥@[L@[|ƒˆ”–„@÷õõ@[|l@z@lK—“…ƒˆ–@}™¤“…@lKl—“z@”’‰•‡@[|@†™–”@[L}ƒ—@`¥@[L@[|ƒˆ”–„@÷õõ@[|l@z@lK¦’…ƒˆ–@}™¤“…@lKl¦’z@”’‰•‡@[|@†™–”@[L}ƒ—@`¥@[L@[|ƒˆ”–„@÷õõ@[|l@z@lK¢ˆ…ƒˆ–@}™¤“…@lKl¢ˆz@”’‰•‡@[|@†™–”@[L}ƒ—@`¥@[L@[|ƒˆ”–„@÷õõ@[|l@z@lK–|…ƒˆ–@}™¤“…@‚¤‚‚@lKl–z@”’‰•‡@[|@†™–”@[L}£…¢£@[|@~@[l@PP@[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@[MÓÄmÄÓÓ]@@`–@[|@[|K–@[MÄÓÓmâÉÄÅmÆÉÓÅâ]@[MâäÂÙÖäãÉÕÅâ]@[MÓÄmÁÙÇâ]@nn[\K“‰¢£‰•‡{K@KÓÉÂÙÁÙè@K—™…ƒ‰–¤¢@z{…ƒˆ–@}lK@KÓÉÂÙÁÙè@K—™…ƒ‰–¤¢@™¤“…z@”’‰•‡@[|@†™–”@[P}{[MÁÙ]@[MÁÙÆÓÁÇâ]@[|@[\[Öl[Ö@z@lK¢…ƒˆ–@}[ÖzlK¢@™¤“…z@”’‰•‡@[|@†™–”@[L}[MÁâ]@[MÁâmÓÉâã]@[MÁâmÖ×ãâ]@[MÁâmÓÉÂâ]@``ÔÁÃÈÉÕÅM[MÔÁÃÈÉÕÅ]]kÅçÉãMÉÕçMÆÓÖæÁâÔ]kÓÂçMÆÓÖæÁâÔ]k×ÙçMÆÓÖæÁâÔ]]@[LlK§@z@l[Ö…ƒˆ–@}[K§@z@l[Ö@™¤“…@†–™@[|@¤¢‰•‡@[L}[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@[MÓÄmÄÓÓ]@`§@[|@[L@[MÓÄmÁÙÇâ]`™”@K–¤£[MÄÓÓâ]@z@[[\[Ö…ƒˆ–@}[[MÄÓÓâ]@z@[[\[Ö@™¤“…z@”’‰•‡@[|@†™–”@[L}[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@[MÓÄmÄÓÓ]@`§@[\K§@`–@[|@[L@[MÓÄmÁÙÇâ]„““z@[MÄÓÓâ]…ƒˆ–@}”’‰•‡@ÄÓÓ¢}£–¤ƒˆ@„““[MâäÂÙÖäãÉÕÅâ]@z@[[\K¢…ƒˆ–@}[MâäÂÙÖäãÉÕÅâ]@z@[[\K¢@™¤“…z@”’‰•‡@[|@†™–”@[L}[MÁâ]@[MÁâmÓÉâã]@[MÁâmÖ×ãâ]@[MÁâmÓÉÂâ]@``ÔÁÃÈÉÕÅM[MÔÁÃÈÉÕÅ]]kÅçÉãMÉÕçMÆÓÖæÁâÔ]kÓÂçMÆÓÖæÁâÔ]k×ÙçMÆÓÖæÁâÔ]]@[L[MÁÙ]@[MÁÙÆÓÁÇâ]@“‰‚¤£‰“‰£‰…¢`ñK@[\[Ö”¥ä“@z@”¥ä“K–…ƒˆ–@”¥ä“@z@”¥ä“K–@™¤“…z@”’‰•‡@[|@†™–”@[L[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@@`–@[|@[L@@[MÓÄmÁÙÇâ]|£…¢£@`…@”¥“ä@PP@™”@”¥“ä@OO@a‚‰•a£™¤…“•@`†@”¥ä“@”¥“ä“¢¥£–ƒ@z@“¢„¢„@^“¢„¢„@z@[[\[Ö…ƒˆ–@“¢„¢„@™¤“…z@”’‰•‡@[|@†™–”@[L[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@[MÓÄmÄÓÓ]@@`–@[|@[L@[MÄÓÓmâÉÄÅmÆÉÓÅâ]@[MÓÄmÁÙÇâ]£…¢£@`…@“¢¥£–ƒ@PP@™”@“¢¥£–ƒ“•@`†@“¢„¢„@“¢¥£–ƒ[M×ÙÖÇÙÁÔâ]@z@[[\[Ö…ƒˆ–@à[[M×ÙÖÇÙÁÔâ]@z@™¤“…z@”’‰•‡@[|@†™–”@[L[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@[MÓÄmÄÓÓ]@@`–@[|@[L@[MÄÓÓmâÉÄÅmÆÉÓÅâ]@[MÓÄmÁÙÇâ][MÁ×Æ]@z@[[\[Ö@“‰‚¤£‰“‰£‰…¢`ñK…ƒˆ–@}à[[MÁ×Æ]@™¤“…z@”’‰•‡@[|@†™–”@[L}[MÓÄ]@[MÓÄmÓÉÂâ]@[MÓÄmÖ×ãâ]@[MÓÄmÄÓÓ]@`‚@}ÁÃ~ñ}@`–@[|@[L@[MÄÓÓmâÉÄÅmÆÉÓÅâ]@[MâäÂÙÖäãÉÕÅâ]@[MÓÄmÁÙÇâ]…§£££™@`¢@N—@[|“‰‚¤£‰“‰£‰…¢`ñK@K—™…ƒ‰–¤¢@z[MâäÂÙÖäãÉÕÅâ]…ƒˆ–@}¤£‰“‰£‰…¢`ñK@™¤“…z@”’‰•‡@[[|@†™–”@[L}…ƒˆ–@}à[[MâäÂÙÖäãÉÕÅâ]}[MÁÙ]@[MÁÙÆÓÁÇâ]@[|@[L{™”@`™†@[Pƒ“…•@z™”@`†@\[Ö@\K„@\K„‚‡@\K“¢£@ÃÅÅÄäÔ×K\@[M×ÙÖÇÙÁÔâ]@[Mâ×ÅÃ×ÇÔâ]@[MâÃÙÉ×ãâ]‚ƒ’¤—@z@„‰¢£­ƒ„@KK^—§@`¦¥©†@¤£‰“‰£‰…¢`ñK[[M‰¢–„£…]K—§Ké@¤£‰“‰£‰…¢`ñ£–¤ƒˆ@‚ƒ’¤—½„‰¢£mñ@z@[MÁÓÓÆÉÓÅâ]—§@`¦¥©†@¤£‰“‰£‰…¢`ñK—§Ké@\K¢@[M×ÙÖÇÙÁÔâz‚zNK¢]@[Mâ×ÅÃ×ÇÔâz‚zNK¢]@[MÁ×Æz‚zNK¢]@[MÆÉÓÅâ]@[MãÅÔ×ÓÁãÅâ]@à[MâÃÙÉ×ãâ]@[MâÃÙÉ×ãâmâÙÃ]@[MâäÂÙÖäãÉÕÅâz‚zNK¢]@[MÄÓÓâz‚zNK¢]@@”’…†‰“…@”•@[MÔÁÕÆÉÓÅñ]@[MÔÁÕÆÉÓÅò]£–¤ƒˆ@„‰¢£mñ„‰¢£z@„‰¢£mñ@[MÁ×Æ]@[M×ÙÖÇÙÁÔâ]@”’…†‰“…@[MÄÓÓâ]ƒ—@`¥Â@¤£‰“‰£‰…¢`ñK—§Ké@[MÄÉâã]£–¤ƒˆ@„‰¢£¢ƒ‰‰@z@[MÆÉÓÅâ]@[MãÅÔ×ÓÁãÅâ]@[MÔÁÕÆÉÓÅñ]@[MÔÁÕÆÉÓÅò]@[MâÃÙÉ×ãâ]@[MâÃÙÉ×ãâmâÙÃ]@[MÁ×Æz‚zNK¢]@[M×ÙÖÇÙÁÔâz‚zNK¢]­|…ƒˆ–@}¢ƒ‰‰@™¤“…}—§@`–†™–”~‰‚”`ñðô÷k£–~‰¢–øøõù`ñ@`¦¥©†@¤£‰“‰£‰…¢`ñK¢ƒ‰‰K—§Ké@\K¢@\K“‰¢£‰•‡@”’…†‰“…@”•@à[MÆÉÓÅâ]@[MãÅÔ×ÓÁãÅâ]@[MÔÁÕÆÉÓÅñ]@[MÔÁÕÆÉÓÅò]@[MâÃÙÉ×ãâ]@[MâÃÙÉ×ãâmâÙÃ]@PP£–¤ƒˆ@¢ƒ‰‰½†–™ƒ…@z@ƒ“…•@““‰•¢£““@z­ƒ£@LLÅÖÆ@O@¢¤@`ƒ„@[M×æÄ]ƒ—@`¥—@[M×ÙÖÇÙÁÔâ]@[MÁ×Æ]@[Mâ×ÅÃ×ÇÔâ]@[MâÃÙÉ×ãâ]@[MÂÉÕÄÉÙ]ƒ—@`¥—@[MÄÓÓâ]@[MÄÓÓÄÉÙ]ƒ—@`¥—@”•a”•ña\Kñ@[MÔÁÕÄÉÙ]a”•ñƒ—@`¥—@”•aƒ£ña\Kñ@[MÔÁÕÄÉÙ]aƒ£ñƒ—@`¥—@”•a”•òa\Kò@[MÔÁÕÄÉÙ]a”•òƒ—@`¥—@”•aƒ£òa\Kò@[MÔÁÕÄÉÙ]aƒ£òƒ—@`¥—@”•a”•óa\Kó@[MÔÁÕÄÉÙ]a”•óƒ—@`¥—@”•aƒ£óa\Kó@[MÔÁÕÄÉÙ]aƒ£óƒ—@`¥—@”•a”•ôa\Kô@[MÔÁÕÄÉÙ]a”•ôƒ—@`¥—@”•aƒ£ôa\Kô@[MÔÁÕÄÉÙ]aƒ£ôƒ—@`¥—@”•a”•õa\Kõ@[MÔÁÕÄÉÙ]a”•õƒ—@`¥—@”•aƒ£õa\Kõ@[MÔÁÕÄÉÙ]aƒ£õƒ—@`¥—@”•a”•öa\Kö@[MÔÁÕÄÉÙ]a”•öƒ—@`¥—@”•aƒ£öa\Kö@[MÔÁÕÄÉÙ]aƒ£öƒ—@`¥—@”•a”•÷a\K÷@[MÔÁÕÄÉÙ]a”•÷ƒ—@`¥—@”•aƒ£÷a\K÷@[MÔÁÕÄÉÙ]aƒ£÷ƒ—@`¥—@”•a”•øa\Kø@[MÔÁÕÄÉÙ]a”•øƒ—@`¥—@”•aƒ£øa\Kø@[MÔÁÕÄÉÙ]aƒ£øƒ—@`¥—@”•a”•ùa\Kù@[MÔÁÕÄÉÙ]a”•ùƒ—@`¥—@”•aƒ£ùa\Kù@[MÔÁÕÄÉÙ]aƒ£ùÅÖÆ½
+# The name of the z/OS PDS to receive the pax.Z file
+DIST = "//UNIX.SOURCE(UTILPAXZ)"
+# The z/Architecture machine level. ZS-3 is for relative+immediate+long displacement,
+# all of which are used in the code. This means this will not run on a anything less
+# than a z9.
+MACHINE=ZSERIES-3
+MACROS = LT FINDUCBP
+ALLFILES=makefile
+SCRIPTS_SRC= mkjcl.sh mkdsn.rexx rmdsn.rexx
+SCRIPTS=$(SCRIPTS_SRC:b)
+ALLFILES+=$(SCRIPTS_SRC) $(SCRIPTS)
+FILES =  FINDUCBP UCBSCANP REGS PRNTABLE iefbr14.jcl
+ALLFILES+=$(FILES)
+APF = ams uaudit mgcre mcsoper
+DLLS = DLL-template.dll isgquery.dll finducbs.dll lspace.dll lvtoc.dll ucbscan.dll prdasd.dll
+ALLFILES+=$(DLLS)
+DLL_SIDE_FILES += $(DLLS:dll=x)
+ALLFILES+=$(DLL_SIDE_FILES)
+PROGRAMS = lsenq subjob ftee  deblock rmjes flowdrvr unixlog
+ALLFILES+=$(PROGRAMS)
+SUBROUTINES = storgrup$O
+ALLFILES+=$(SUBROUTINES)
+MANFILE1=$(PROGRAMS:b:+".man1") $(PROGRAMS:b:+".cat1")#$(PROGRAMS:b:^"man/man1/":+".1") $(PROGRAMS:b:^"man/cat1/":+".1")
+ALLFILES+=$(MANFILE1)
+MANFILE3=$(SUBROUTINES:b:+".man3") $(SUBROUTINES:b:+".cat3")#$(PROGRAMS:b:^"man/man3/":+".3") $(PROGRAMS:b:^"man/cat3/":+".3")
+ALLFILES+=$(MANFILE3)
+SPECPGMS = lsdasd
+#ALLFILES+=$(SPECPGMS)
+TEMPLATES = SKELETON.rexx SKELETON.s SKELETON.sh SKELETON.pl SKELETON.awk
+ALLFILES+=$(TEMPLATES)
+PREFIX=/usr/local
+BINDIR=$(PREFIX)/bin
+MANDIR=$(PREFIX)/man
+DLLDIR=$(PREFIX)/lib
+LD_LIBS += -L .
+LD_LIBS += -l utilities-1
+LD_LIBS += -l "//'CEE.SCEELKED'"
+LD_LIBS += -l "//'SYS1.CSSLIB'"
+LD_DLL = -b DYNAM\(DLL\),CASE\(MIXED\),RENT,REUS
+LD_OPTS += $(LDFLAGS)
+LD_ARGS +=
+AS=as
+LD=ld
+#AS_LIBS += -I /home/tsh009/source/maclib
+#S_LIBS = -I TSH009.SOURCE.MACLIB
+AS_LIBS += -I .
+AS_LIBS += -I ASM.SASMMAC2
+AS_LIBS += -I ASM.SASMMAC1
+AS_LIBS += -I CEE.SCEEMAC
+AS_LIBS += -I SYS3.TDF.V1R1M0.SAMPLIB.LIHT
+AS_OPTS += --gadata --gdwarf3 -mGOFF
+AS_DLL += -mGOFF
+AS_LIST += -a=$*.lst
+PREREQ.lsenq = 'finducbs.x'
+.SUFFIXES: .s .o .a
+all : dll $(SUBROUTINES) $(PROGRAMS)  $(SCRIPTS) $(SPECPGMS)
+	touch all
+$(MACROS): ; # Don't need to do anything for macros.
+%.o : %.c
+	@echo making $@ from $&
+# The following .man? and .cat? create the templates
+# for the various man files.
+# The suffix 1..9 are for the various sections:
+# 1 - commands
+# 2 - system calls (supplied by z/UNIX) - not for users
+# 3 - Library calls (for subroutines supplied in libraries)
+# 4 - Special files (such as configuration files)
+# 5 - file formats and conventions
+# 6 - Games
+# 7 - Miscellaneous (such as macros, copybooks)
+# 8 - System Admin Commands
+# 9 - Kernel Routines
+#
+# Of course, this system does not supply all of these.
+# I only put all of them in for completeness.
+%.man1 .PRECIOUS :
+	test ! -e man/man1/$*.1
+	cd man/man1;\
+	sed -E 's/template/$*/g' SKELETON.1 | sed -E 's/TEMPLATE/$*/g' >$*.1;\
+	cd -;\
+	ln -s man/man1/$*.1 $@
+%.man2 .PRECIOUS :
+	test ! -e man/man2/$*.2
+	cd man/man2;\
+	sed -E 's/template/$*/g' SKELETON.2 | sed -E 's/TEMPLATE/$*/g' >$*.2;\
+	cd -;\
+	ln -s man/man2/$*.2 $@
+%.man3 .PRECIOUS :
+	test ! -e man/man3/$*.3
+	cd man/man3;\
+	sed -E 's/template/$*/g' SKELETON.3 | sed -E 's/TEMPLATE/$*/g' >$*.3;\
+	cd -;\
+	ln -s man/man3/$*.3 $@
+%.man4 .PRECIOUS :
+	test ! -e man/man4/$*.4
+	cd man/man4;\
+	sed -E 's/template/$*/g' SKELETON.4 | sed -E 's/TEMPLATE/$*/g' >$*.4;\
+	cd -;\
+	ln -s man/man4/$*.4 $@
+%.man5 .PRECIOUS :
+	test ! -e man/man5/$*.5
+	cd man/man5;\
+	sed -E 's/template/$*/g' SKELETON.5 | sed -E 's/TEMPLATE/$*/g' >$*.5;\
+	cd -;\
+	ln -s man/man5/$*.5 $@
+%.man6 .PRECIOUS :
+	test ! -e man/man6/$*.6
+	cd man/man6;\
+	sed -E 's/template/$*/g' SKELETON.6 | sed -E 's/TEMPLATE/$*/g' >$*.6;\
+	cd -;\
+	ln -s man/man6/$*.6 $@
+%.man7 .PRECIOUS :
+	test ! -e man/man7/$*.7
+	cd man/man7;\
+	sed -E 's/template/$*/g' SKELETON.7 | sed -E 's/TEMPLATE/$*/g' >$*.7;\
+	cd -;\
+	ln -s man/man7/$*.7 $@
+%.man8 .PRECIOUS :
+	test ! -e man/man8/$*.8
+	cd man/man8;\
+	sed -E 's/template/$*/g' SKELETON.8 | sed -E 's/TEMPLATE/$*/g' >$*.8;\
+	cd -;\
+	ln -s man/man8/$*.1 $@
+%.man9 .PRECIOUS :
+	test ! -e man/man9/$*.9
+	cd man/man9;\
+	sed -E 's/template/$*/g' SKELETON.9 | sed -E 's/TEMPLATE/$*/g' >$*.9;\
+	cd -;\
+	ln -s man/man9/$*.9 $@
+%.cat1 : %.man1
+	test ! -e $@
+	touch -r $& man/cat1/$*.1
+	ln -s man/cat1/$*.1 $@
+	touch -r $& $@
+%.cat2 : %.man2
+	test ! -e $@
+	touch -r $& man/cat2/$*.2
+	ln -s man/cat2/$*.2 $@
+	touch -r $& $@
+%.cat3 : %.man3
+	test ! -e $@
+	touch -r $& man/cat3/$*.3
+	ln -s man/cat3/$*.3 $@
+	touch -r $& $@
+%.cat4 : %.man4
+	test ! -e $@
+	touch -r $& man/cat4/$*.4
+	ln -s man/cat4/$*.4 $@
+	touch -r $& $@
+%.cat5 : %.man5
+	test ! -e $@
+	touch -r $& man/cat5/$*.5
+	ln -s man/cat5/$*.5 $@
+	touch -r $& $@
+%.cat6 : %.man6
+	test ! -e $@
+	touch -r $& man/cat6/$*.6
+	ln -s man/cat6/$*.6 $@
+	touch -r $& $@
+%.cat7 : %.man7
+	test ! -e $@
+	touch -r $& man/cat7/$*.7
+	ln -s man/cat7/$*.7 $@
+	touch -r $& $@
+%.cat8 : %.man8
+	test ! -e $@
+	touch -r $& man/cat8/$*.8
+	ln -s man/cat8/$*.8 $@
+	touch -r $& $@
+%.cat9 : %.man9
+	test ! -e $@
+	touch -r $& man/cat9/$*.9
+	ln -s man/cat9/$*.9 $@
+	touch -r $& $@
+man : $(MANFILE1) $(MANFILE2)
+	for i in 1 2 3 4 5 6 7 8 9;do \
+	  cd man/man$$i ; \
+	  for j in *.$$i;do \
+              touch -rf $$j ../cat$$i/$$j; \
+	  done ; \
+	 cd - ; \
+	done
+	touch man
+scripts : $(SCRIPTS)
+	touch scripts
+% : %.rexx
+	echo 'rule %.%rexx: making $@ from $<'
+	cp -v $< $@
+	chmod 755 $@
+% : %.pl
+	echo 'rule %.%pl: making $@ from $<'
+	cp -v $< $@
+	chmod 755 $@
+% : %.awk
+	echo 'rule %.%awk: making $@ from $<'
+	cp -v $< $@
+	chmod 755 $@
+% : %.sh
+	echo 'rule %.%sh: making $@ from $<'
+	cp -v $< $@
+	chmod 755 $@
+% : %.o
+	@echo 'rule bubba %.%o: making $@ from $<'
+	test $@ = $% && $(LD) $(LD_LIBS) $(LD_OPTS) $(LD_DLL)  -o $@ $@.o $(DLL_SIDE_FILES) $(SUBROUTINES) $(LD_ARGS) >>$*.listing
+#.a .LIBRARY .precious :
+#	echo '%.a .LIBRARY .precious rule: making $@ from $&'
+#	$(AR) $(ARFLAGS) $@ $*$O
+%$O : %.s
+	echo '$O:%.s rule: making $@ from $<'
+	$(AS) $(AS_LIST) $(AS_OPTS) $(AS_LIBS) --"MACHINE($(MACHINE)),EXIT(INX(FLOWASM),LBX(FLOWASM),PRX(FLOWASM))" $<
+%.x : %$O
+	echo '$.x : %$O rule for $@ using $<'
+	$(LD) $(LD_LIBS) $(LD_OPTS) $(LD_DLL) -x $@ $< $(LD_ARGS)
+	-rm a.out
+$(DLLS) : $$*$O
+	echo '$$(DLLS) : $$*$O rule: making $@ from $<'
+	$(LD) $(LD_LIBS) $(LD_OPTS) $(LD_DLL) -x $*.x -o $@ $< $(LD_ARGS)
+dll	: $(DLLS)
+	echo 'making DLLs'
+	touch dll
+$(SUBROUTINES) : $$*.s
+	echo '$(SUBROUTINES) : $$*.s rule: making $@ from $<'
+	$(AS) $(AS_LIST) $(AS_OPTS) $(AS_LIBS) --"MACHINE($(MACHINE)),EXIT(INX(FLOWASM),LBX(FLOWASM),PRX(FLOWASM))" $<
+	$(AR) $(ARFLAGS) libutilities-1.a $*$O
+mvUl : mvUl.o
+	echo "mvUl : mvUl.o rule: making $@ from $<"
+	$(LD) $(LD_LIBS) $(LD_OPTS)  -o $@ $<  $(LD_ARGS)
+	@test -e mvlU && rm mvlU || /bin/true
+	ln -f mvUl mvlU
+lsvtoc : lsdasd ;
+lsdasd : $$*$O
+	echo "lsdasd rule: making $@ from $<"
+	$(LD) $(LD_LIBS) $(LD_OPTS) $(LD_DLL)  -o $@ $< $(DLL_SIDE_FILES) $(LD_ARGS)
+	test -e lsvtoc && rm lsvtoc
+	ln -f lsdasd lsvtoc
+$(PROGRAMS) : $$*$O
+	echo "\$$(PROGRAMS) : rule: making $@ from $<"
+	$(LD) $(LD_LIBS) $(LD_OPTS) $(LD_DLL)  -o $@ $< $(DLL_SIDE_FILES) $(LD_ARGS)
+$(APF) : $$*$O libutilities-1.a
+	echo '\$$(APF) rule: making $@ from $<'
+	$(LD) $(LD_LIBS) $(LD_OPTS) $(LD_DLL) -b 'AC=1' -o $@ $< $(DLL_SIDE_FILES) $(SUBROUTINES) $(LD_ARGS)
+	extattr -s +ap $@
+libutilities-1.a .precious :	$(SUBROUTINES)
+	echo 'utilities-1.a rule: making $$@ from $<'
+	echo '\$$(SUBROUTINES)'
+	$(AR) $(ARFLAGS) $@ $<
+	#rm -rf $&
+clean :
+	rm -f *$O *.ad *.dbg *.lst CEEDUMP.* $(PROGRAMS) $(SPECPGMS) $(SCRIPTS)
+backup : dist
+[
+	cd ..;pax -wvzf utilities-1.$$(isodate).pax.Z utilities-1
+	touch backup
+]
+dist_1 : $(ALLFILES)
+	pax -wvzf utilities-1.pax.Z *.s $(PROGRAMS:b:+".s") $(SPECPGMS:b:+".s") $(APF:b:+".s") $(FILES) $(TEMPLATES) \
+	$(SCRIPTS) $(SCRIPTS_SRC) $(SUBROUTINES:b:+".s") $(DLLS:b:+".s")  makefile man $(MANFILE1) $(MANFILE2)
+	touch dist_1
+dist: dist_1 $(APF) $(PROGRAMS) makefile $(DLLS)
+	cp -vB utilities-1.pax.Z $(DIST)
+	touch dist
+ascii : $(FILES) $(TEMPLATES) $(MANFILE1) $(MANFILE2) $(SCRIPTS) $(SCRIPTS_SRC) $(APF:b:+".s") $(PROGRAMS:b:+".s")
+[
+	@echo 'ascii rule'
+	pax -ofrom=ibm-1047,to=iso8859-1 -wvzf utilities-1.ascii.pax.Z *.s *.listing makefile man \
+	$(FILES) $(TEMPLATES) $(MANFILE1) $(MANFILE2) $(SCRIPTS) $(SCRIPTS_SRC) &&
+	touch ascii
+]
+force : clean all
+install :
+[
+cat <<EOF | su -
+	cd $(PWD)
+	cp -vp $(PROGRAMS) $(APF) $(SPECPGMS) $(SCRIPTS) $(BINDIR)
+	cp -vp $(DLLS) $(DLLDIR)
+	cp -vp man/man1/*.1 $(MANDIR)/man1
+	cp -vp man/cat1/*.1 $(MANDIR)/cat1
+	cp -vp man/man2/*.2 $(MANDIR)/man2
+	cp -vp man/cat2/*.2 $(MANDIR)/cat2
+	cp -vp man/man3/*.3 $(MANDIR)/man3
+	cp -vp man/cat3/*.3 $(MANDIR)/cat3
+	cp -vp man/man4/*.4 $(MANDIR)/man4
+	cp -vp man/cat4/*.4 $(MANDIR)/cat4
+	cp -vp man/man5/*.5 $(MANDIR)/man5
+	cp -vp man/cat5/*.5 $(MANDIR)/cat5
+	cp -vp man/man6/*.6 $(MANDIR)/man6
+	cp -vp man/cat6/*.6 $(MANDIR)/cat6
+	cp -vp man/man7/*.7 $(MANDIR)/man7
+	cp -vp man/cat7/*.7 $(MANDIR)/cat7
+	cp -vp man/man8/*.8 $(MANDIR)/man8
+	cp -vp man/cat8/*.8 $(MANDIR)/cat8
+	cp -vp man/man9/*.9 $(MANDIR)/man9
+	cp -vp man/cat9/*.9 $(MANDIR)/cat9
+EOF
+]

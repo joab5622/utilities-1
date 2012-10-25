@@ -1,1 +1,38 @@
-†‰•„¤ƒ‚¢Mó]@@@@@@@@@@@@@@Ñ–ˆ•@ÔƒÒ–¦•@£@È…“£ˆÔ™’…£¢@@@@@@@@@@@@@@†‰•„¤ƒ‚¢Mó]ÕÁÔÅ@@@@@@@†‰•„¤ƒ‚¢@`@¢ƒ•@–•`“‰•…@ÄÁâÄ@äÃÂ¢k@‰•¥–’‰•‡@@¤¢…™`¢¤——“‰…„@¢¤‚™–¤£‰•…@@@@@@@†–™@…ƒˆ@”£ƒˆ‰•‡@¥–“¤”…@¢…™‰“KâèÕÖ×âÉâ@@@@@@@†‰•„¤ƒ‚¢@M‰•£@\¢¤‚™–¤£‰•…k@¤m‰•£@\¤¢…™¦–™„k@‰•£@\™‡ƒk@‰•£@\\™‡¥“@‰•£@@@@@@@\\™‡¥]@@@@@@@ãˆ…@†‰™¢£@—™”…£…™@—¢¢…„@‰¢@£ˆ…@„„™…¢¢@–†@@¢¤‚™–¤£‰•…@–™@ÕäÓÓK@@@@@@@@@@ãˆ…@¢¤‚™–¤£‰•…K@@@@@@@@@@@@@@‰•£@¢¤‚™–¤£‰•…M¢£™¤ƒ£@¤ƒ‚@\k@¢£™¤ƒ@„ƒ…@\k@¢£™¤ƒ@ƒ”£§@\k@¤m‰•£@@@@@@@@@@@@@@\¤¢…™¦–™„]@ãˆ…@†‰™¢£@—™”…£…™@—¢¢…„@£–@†‰•„¤ƒ‚¢k@‰†@•–£@ÕäÓÓ@@@@@@@@@@@@@@‰K…K@ø@‚¨£…¢@–†@§}ğğ}k@‰¢@£ˆ…@„„™…¢¢@–†@•@ÓÅ@…•‚“…„@@@@@@@@@@@@@@¢¤‚™–¤£‰•…K@@ãˆ…@†‰•„¤ƒ‚¢@™–¤£‰•…@—¢¢…¢@@—™”…£…™@“‰¢£@@@@@@@@@@@@@@ƒ–•£‰•‰•‡@…§ƒ£“¨@†–¤™@†¤““¦–™„@…•£™‰…¢@£–@‰£K@@ãˆ…@†‰™¢£@@@@@@@@@@@@@@†¤““¦–™„@‰¢@£ˆ…@óñ`‚‰£@„„™…¢¢@–†@£ˆ…@äÃÂ@¦ˆ‰ƒˆ@”£ƒˆ…„@–•…@–™@@@@@@@@@@@@@@”–™…@–†@£ˆ…@—££…™•¢K@ãˆ…@¢…ƒ–•„@‰¢@£ˆ…@„„™…¢¢@–†@£ˆ…@ÄÃÅ@†–™@@@@@@@@@@@@@@£ˆ£@„…¥‰ƒ…K@ãˆ…@£ˆ‰™„@‰¢@£ˆ…@„„™…¢¢@–†@£ˆ…@äÃÂ@…§£…•£‰–•@†–™@@@@@@@@@@@@@@£ˆ£@äÃÂK@@ãˆ…@†–¤™£ˆ@‰¢@£ˆ…@¥“¤…@–†@£ˆ…@¢…ƒ–•„@†¤““¦–™„@—¢¢…„@@@@@@@@@@@@@@£–@†‰•„¤ƒ‚¢K@@É†@£ˆ…@™…£¤™•@ƒ–„…@†™–”@£ˆ…@¢¤‚™–¤£‰•…@‰¢@•–£@@@@@@@@@@@@@@©…™–k@£ˆ…•@†‰•„¤ƒ‚¢@¢£–—@—™–ƒ…¢¢‰•‡@¦‰£ˆ@@™…£¤™•@ƒ–„…@–†@ò@•„@@@@@@@@@@@@@@£ˆ…@ÓÅ@ÔÖÄÉÆÉÅÙ@†‰…“„@¢…£@£–@£ˆ…@¢¤‚™–¤£‰•…}¢@™…£¤™•@ƒ–„…KÁäãÈÖÙâ@@@@@@@Ñ–ˆ•@ÔƒÒ–¦•@@@@@@@@@@Á¤£ˆ–™KÃÖ×èÙÉÇÈã@@@@@@@Ã–—¨™‰‡ˆ£@MÃ]@òğñòk@È…“£ˆÔ™’…£¢k@É•ƒK©aÖâ@äÕÉç@ä£‰“‰£…¢@†™–”@@@@@@@@@@Ñ•¤™¨k@òğñò@@@@@@@@@@@@@@@@@@@@@†‰•„¤ƒ‚¢Mó]
+finducbs(3)              John McKown at HealthMarkets              finducbs(3)
+
+
+
+NAME
+       finducbs - scan on-line DASD UCBs, invoking a user-supplied subroutine
+       for each matching volume serial.
+
+SYNOPSIS
+       finducbs (int *subroutine, u_int *userword, int *argc, int **argvl int
+       **argv)
+       The first parameter passed is the address of a subroutine or NULL.
+
+
+          The subroutine.
+              int subroutine(struct ucb *, struc dce *, struc cmtx *, u_int
+              *userword) The first parameter passed to finducbs, if not NULL
+              i.e. 8 bytes of x'00', is the address of an LE enabled
+              subroutine.  The finducbs routine passes a parameter list
+              containing exactly four fullword entries to it.  The first
+              fullword is the 31-bit address of the UCB which matched one or
+              more of the patterns. The second is the address of the DCE for
+              that device. The third is the address of the UCB extention for
+              that UCB.  The fourth is the value of the second fullword passed
+              to finducbs.  If the return code from the subroutine is not
+              zero, then finducbs stop processing with a return code of 2 and
+              the LE MODIFIER field set to the subroutine's return code.
+
+AUTHORS
+       John McKown
+          Author.
+
+COPYRIGHT
+       Copyright (C) 2012, HealthMarkets, Inc.
+
+
+
+z/OS UNIX Utilites from          January, 2012                     finducbs(3)
