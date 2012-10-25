@@ -42,6 +42,11 @@ GO       DS    0H
          LOAD  EP=BPX1WRV
          ST    R0_32,BPX1WRV
          MVC   GQLST(GQPARML),GQPARM
+         MVI   TAB,X'05'
+         LA    R0_32,TAB
+         ST    R0_32,TAB@
+         LHI   R0_32,1
+         ST    R0_32,TABL
          BCTR  R7_32,0            15
          ST    R7_32,RETURN_CODE
          L     R2_32,@ARGC
@@ -122,16 +127,54 @@ DORNAME  DS    0H
          BCTR  R5_32,0
          EX    R5_32,TR_RNAME
 OK1      DS    0H
+         LA    R8_32,QNAMEX       RECEIVING FIELD
+         ST    R8_32,FIELD1@
+         LHI   R9_32,8
+         LA    R10_32,QNAME
+*        AGO   .DOWRT1
+         BRASL R14_32,DO_OCTAL
+         SL    R8_32,FIELD1@
+         ST    R8_32,FIELD1L
+         chi   r8_32,8*4
+         jh    *+2
+*        STM   R8_32,R9_32,FIELD1@
+         L     R0_32,TAB@
+         L     R1_32,TABL
+         STM   R0_32,R1_32,TAB1
+*        LA    R0_32,RNAME
+*        L     R1_32,RNAME_LEN
+*        STM   R0_32,R1_32,FIELD2@
+         LA    R8_32,RNAMEX
+         ST    R8_32,FIELD2@
+         L     R9_32,RNAME_LEN
+         LA    R10_32,RNAME
+         BRASL R14_32,DO_OCTAL
+         SL    R8_32,FIELD2@
+         ST    R8_32,FIELD2L
+         chi   r8_32,255*4
+         jh    *+2
+         LM    R0_32,R1_32,=A(NL,1)
+         STM   R0_32,R1_32,TAB2
+         LHI   R0_32,4
+         ST    R0_32,IOV_COUNT
+         LA    R1_32,CALLX
+         L     R15_32,BPX1WRV
+         CALL  (15),                                                   X
+               (FD2,IOV_COUNT,IOV_STRUC,                               X
+               IOV_ALET,IOV_BUFFER_ALET,                               X
+               RETURN_VALUE,RETURN_CODE,REASON_CODE),VL,               X
+               MF=(E,(1))
+         ago   .nowrt1
+.DOWRT1  ANOP
+         ST    R0_32,BUFFERA
          MVI   QNAME+L'QNAME,X'05' Place TAB in output
+         MVC   QNAME+L'QNAME(1),TAB Place separator in output
          L     R5_32,RNAME_LEN
          LA    R5_32,RNAME(R5_32)
          MVI   0(R5_32),X'15'     Place NEL in output
-         LA    R4_32,QNAME
-         ST    R4_32,BUFFERA
          SLR   R5_32,R4_32
          AHI   R5_32,1
          ST    R5_32,COUNT
-*        ago   .nowrt1
          L     R15_32,BPX1WRT
          LA    R1_32,CALLX
          CALL  (15),(FD2,BUFFERA,ALET,COUNT,                           X
@@ -139,7 +182,9 @@ OK1      DS    0H
                RETCODE,                                                X
                RSNCODE),VL,                                            X
                MF=(E,(1))
+         AGO   .NOWRT2
 .nowrt1  anop
+.NOWRT2  ANOP
          L     R2_32,STORAGE_LENGTH
          STORAGE OBTAIN,                                               X
                LENGTH=(2),                                             X
@@ -192,7 +237,9 @@ GOOD1    DS    0H
          L     R2_32,RETURN@
          LA    R3_32,8(,R2_32)
          USING RETURN_STRUC,R3_32
-         LM    R0_32,R1_32,=A(TAB,1)
+*        LM    R0_32,R1_32,=A(TAB,1)
+         L     R0_32,TAB@
+         L     R1_32,TABL
          STM   R0_32,R1_32,TAB1
          STM   R0_32,R1_32,TAB2
          STM   R0_32,R1_32,TAB3
@@ -206,42 +253,68 @@ GOOD1    DS    0H
 PRINT    DS    0H
          CL    R3_32,4(,R2_32)
          JNL   END_PRINT
+*        LHI   R0_32,8
+*        LA    R1_32,RTN_QNAME
+*        ST    R1_32,FIELD1@
+*        ST    R0_32,FIELD1L
+         LA    R8_32,QNAMEX
+         ST    R8_32,FIELD1@
+         LHI   R9_32,8
+         LA    R10_32,RTN_QNAME
+         BRASL R14_32,DO_OCTAL
          LHI   R0_32,8
-         LA    R1_32,RTN_QNAME
-         ST    R1_32,QNAME@
-         ST    R0_32,QNAMEL
+         SL    R8_32,FIELD1@
+         ST    R8_32,FIELD1L
+         chi   r8_32,8*4  
+         jh    *+2
          LA    R1_32,RTN_JOBNAME
-         ST    R1_32,JOBNAME@
-         ST    R0_32,JOBNAMEL
+         ST    R1_32,FIELD3@ 
+         ST    R0_32,FIELD3L 
          LA    R1_32,RTN_EXCSHR
-         ST    R1_32,EXCSHR@
+         ST    R1_32,FIELD5@
+         ST    R0_32,FIELD5L 
          LA    R1_32,RTN_SYSNAME
-         ST    R1_32,SYSNAME@
-         ST    R0_32,SYSNAMEL
-         LA    R1_32,RTN_EXCSHR
-         ST    R1_32,EXCSHR@
-         ST    R0_32,EXCSHRL
+         ST    R1_32,FIELD4@ 
+         ST    R0_32,FIELD4L 
          LA    R1_32,RTN_STATUS
-         ST    R1_32,STATUS@
-         ST    R0_32,STATUSL
+         ST    R1_32,FIELD6@
+         ST    R0_32,FIELD6L
          LA    R1_32,RTN_SCOPE
-         ST    R1_32,SCOPE@
-         ST    R0_32,SCOPEL
+         ST    R1_32,FIELD7@
+         ST    R0_32,FIELD7L
          UNPK  D_RC(9),RTN_TCB(5)
          TR    D_RC(8),TOHEX-X'F0'
          LA    R1_32,D_RC
-         ST    R1_32,TCB@
-         ST    R0_32,TCBL
+         ST    R1_32,FIELD8@
+         ST    R0_32,FIELD8L
          UNPK  F_RC(5),RTN_ASID(3)
          TR    F_RC(4),TOHEX-X'F0'
          LA    R1_32,F_RC
-         ST    R1_32,ASID@
-         MVC   ASIDL,=F'4'
-         MVC   RNAMEL,RTN_RLEN
-         LA    R1_32,RTN_RNAME
-         ST    R1_32,RNAME@
+         ST    R1_32,FIELD9@
+         MVC   FIELD9L,=F'4'
+*        MVC   FIELD2L,RTN_RLEN
+*        LA    R1_32,RTN_RNAME
+*        ST    R1_32,FIELD2@
+         LA    R8_32,RNAMEX
+         ST    R8_32,FIELD2@
+         L     R9_32,RTN_RLEN
+         LA    R10_32,RTN_RNAME
+         BRASL R14_32,DO_OCTAL
+         LHI   R0_32,8
+         SL    R8_32,FIELD2@
+         ST    R8_32,FIELD2L
          MVC   IOV_COUNT,=A(IOV_STRUC_L/8)
          L     R10_32,IOV_COUNT
+         chi   r8_32,255*4
+         jh    *+2
+         chi   r10_32,iov_struc_l/8
+         jh    *+2
+*        la r1_32,iov_struc
+*        la r2_32,96(,r1_32)
+*        la r3_32,96(,r2_32)
+*        la r4_32,96(,r3_32)
+*        la r5_32,96(,r4_32)
+*        ex 0,*
          LA    R1_32,CALLX
          L     R15_32,BPX1WRV
          CALL  (15),                                                   X
@@ -273,6 +346,35 @@ GOOD2    DS    0H
 NOFREE   DS    0H
          SLR   R15_32,R15_32
          J     GOBACK
+DO_OCTAL DS    0H
+         STM   R14_32,R12_32,12(R13_32)
+         CHI   R9_32,255
+         JH    *+2
+         LA    R1_32,PRNTABLE     POINT TO PRINT TABLE
+         SLR   R0_32,R0_32        TEST CHAR IS X'00'
+TROO     TROO  R8_32,R10_32,0     MOVE AND TEST
+         JO    TROO               LOOP ON CC=3
+         JE    TROOE              FINISHED!
+*
+* TRANSLATE TO OCTAL
+         SLR   R3_32,R3_32
+         IC    R3_32,0(,R10_32)   LOAD BYTE
+         MVI   0(R8_32),C'\'      PLACE ESCAPE CHAR IN OUTPUT
+*        STC   R3_32,0(R8_32)     temp
+         LA    R4_32,0(R3_32,R3_32)
+         ALR   R3_32,R4_32
+         LA    R3_32,OCTAL(R3_32)
+         MVC   1(3,R8_32),0(R3_32) 
+         LA    R10_32,1(,R10_32)
+         LA    R8_32,4(,R8_32)
+         LA    R1_32,PRNTABLE
+         BCTR  R9_32,0
+         LTR   R9_32,R9_32
+         JP    TROO
+TROOE    DS    0H
+         ST    R8_32,8*4+20(,R13_32)
+         LM    R14_32,R12_32,12(R13_32) 
+         BR    R14_32
 STORAGE_LENGTH DC A(4*1024*1024)
 FD1      DC    F'1'
 FD2      DC    F'2'
@@ -288,10 +390,9 @@ CP_RNAME MVC   RNAME(0),0(R6_32)
 TR_RNAME TR    RNAME(0),TOUPPER
 TOHEX    DC    C'0123456789ABCDEF'
 FORMAT   DC    C'ISGQUERY Return code=%i Modifier=%#8x',X'1500'
-TAB      DC    X'05'
 NL       DC    X'15'
-*TITLE    DC    CL80'LSENQ DUMP'  
-*OPTIONS  DC    CL255'BLOCKS,STORAGE,REGST(256),GENOPTS'
+TITLE    DC    CL80'LSENQ DUMP'   
+OPTIONS  DC    CL255'BLOCKS,STORAGE,REGST(256),GENOPTS' 
 TOUPPER  DC    256AL1(*-TOUPPER)
          ORG   TOUPPER+X'81'
          DC    C'ABCDEFGHI'
@@ -299,6 +400,28 @@ TOUPPER  DC    256AL1(*-TOUPPER)
          DC    C'JKLMNOPQR'
          ORG   TOUPPER+X'A2'
          DC    C'STUVWXYZ'
+         ORG
+         DS    0D
+PRNTABLE PRNTABLE abcdefghijklmnopqrstuvwxyz  
+PRNTABLE PRNTABLE ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+PRNTABLE PRNTABLE 0123456789                  
+PRNTABLE PRNTABLE -_.+=()@#$
+*        ORG   PRNTABLE+C' '
+*        DC    C' '
+         ORG
+OCTAL    DS    256CL3
+         LCLA  &A,&A1,&A2,&A3
+&A       SETA  0
+         ORG   OCTAL
+.OCTAL   ANOP
+&A1      SETA  (&A AND 7)
+&A2      SETA  (&A SRL 3)
+&A2      SETA  (&A2 AND 7)     
+&A3      SETA  (&A SRL 6)
+&A3      SETA  (&A3 AND 7)      
+         DC    CL3'&A3&A2&A1'
+&A       SETA  &A+1  
+         AIF   (&A LE 255).OCTAL
          ORG
          ISGQUERY MF=(L,GQPARM)                                         
          LTORG *
@@ -324,6 +447,7 @@ D_MODIFIER DS  D
 F_RC     DS    F
 F_MODIFIER DS  F
 RETURN@  DS    A
+RET@     DS    A
 GQLST    DS    (GQPARML)X
 BPX1WRT  DC    A(0)               DYNAMICALLY LOADED
 BPX1WRV  DC    A(0)               DYNAMICALLY LOADED
@@ -380,41 +504,44 @@ CALLX    CALL  ,(0,                                                    X
                0,                                                      X
                0),VL,MF=L
 IOV_COUNT DS   F
+RNAME_LEN DS   F
+TAB@     DS    A
+TABL     DS    F
+QNAME    DS    CL8
+RNAME    DS    CL255
+QNAMEX   DS    4CL(L'QNAME)
+RNAMEX   DS    4CL(L'RNAME)
 IOV_STRUC DS   0D
-QNAME@   DS    A
-QNAMEL   DS    F
+FIELD1@  DS    A
+FIELD1L  DS    F
 TAB1     DS    2F
-RNAME@   DS    A
-RNAMEL   DS    F
+FIELD2@  DS    A
+FIELD2L  DS    F
 TAB2     DS    2F
-JOBNAME@ DS    A
-JOBNAMEL DS    F
+FIELD3@  DS    A
+FIELD3L  DS    F
 TAB3     DS    2F
-SYSNAME@ DS    A
-SYSNAMEL DS    F
+FIELD4@  DS    A
+FIELD4L  DS    F
 TAB4     DS    2F
-EXCSHR@  DS    A
-EXCSHRL  DS    F
+FIELD5@  DS    A
+FIELD5L  DS    F
 TAB5     DS    2F
-STATUS@  DS    A
-STATUSL  DS    F
+FIELD6@  DS    A
+FIELD6L  DS    F
 TAB6     DS    2F
-SCOPE@   DS    A
-SCOPEL   DS    F
+FIELD7@  DS    A
+FIELD7L  DS    F
 TAB7     DS    2F
-TCB@     DS    A
-TCBL     DS    F
+FIELD8@  DS    A
+FIELD8L  DS    F
 TAB8     DS    2F
-ASID@    DS    A
-ASIDL    DS    F
+FIELD9@  DS    A
+FIELD9L  DS    F
 NL1      DS    2F
 IOV_STRUC_L EQU *-IOV_STRUC
-RNAME_LEN DS   F
-QNAME    DS    CL8
-         DS    X                  Reserve byte for NEL
-RNAME    DS    CL255
-         DS    X                  Reserver byte for NEL
 CONTENTION DS  X
+TAB      DC    X'05'
 DSASIZE  EQU   *-CEEDSA
          BPXYCONS DSECT=YES,LIST=YES
          BPXYIOV
