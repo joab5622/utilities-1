@@ -1,0 +1,76 @@
+finducbs(3)              John McKown at HealthMarkets              finducbs(3)
+
+
+
+NAME
+       finducbs - scan on-line DASD UCBs, invoking a user-supplied subroutine
+       for each matching volume serial.
+
+SYNOPSIS
+       finducbs accepts five (5) parameters.
+       Parameter 1 is a fullword address of an LE enabled subroutine. This
+       subroutine is invoked for each matching UCB address, unless it is NULL
+       (0x00000000). When this parameter is NULL, then finducbs returns two
+       unsigned halfwords in bits 32..63 of general register 0. I do not know
+       how to access this information in any of the LE enabled compilers.
+
+       Parameter 2 is a fullword which can contain any 4 bytes. These bytes
+       are sent to the subroutine above as the third fullword passed to it.
+
+       Parameter 3 is the address of a 32 bit integer. This integer is the
+       number of entries in each of the following two parameters. If this
+       integer is equal to zero, then no pattern matching is done and every on
+       line DASD UCB is passed to the subroutine.
+
+       Parameter 4 is the address of an array of addresses. Each entry in this
+       array is a 31 bit pointer to a 32 bit integer. This integer is the
+       length of the character string pointed to by the corresponding array
+       element of the 5th paramete.
+
+       Parameter 5 is the address of an array of addresses. Each entry
+       in this array is a pointer to a null delimited character
+       string.  Each character string can be at most 6 characters.
+       They are used as a pattern to select the UCBs to be sent to the
+       subroutine previously specified.  Each character string can
+       either be 6 character long string, with no wild cards, which
+       indicates a single volume serial. A string of less than 6
+       characters, with no "wild cards" in it, indicating a volume
+       serial prefix. Or a non-zero length string containing "wild
+       card" characters.  As stated previously, the corresponding
+       entry in the 4th parameter array is a pointer to a 32 bit
+       integer which contains the length of this character string.
+       The "wild cards" accepted are an asterisk *, which matches
+       zero or more characters. And a question mark ?, which matches
+       exactly one character.
+
+   The subroutine.
+       The first parameter passed to finducbs, if not NULL, is the address of
+       an LE enabled subroutine.  The finducbs routine passes a parameter list
+       containing exactly three fullword entries to it.  The first fullword is
+       the 31-bit address of the UCB which matched one or more of the
+       patterns. The second is the address of the DCE for that device. The
+       third is the value of the second fullword passed to finducbs.  If the
+       return code from the subroutine is not zero, then finducbs stop
+       processing with a return code of 2 and the LE MODIFIER field set to the
+       subroutine's return code.
+
+DESCRIPTION
+       The finducbs routine is used to scan on line DASD UCBs. For each UCB
+       whose volume serial matches one or more of the input patterns (or all
+       UCBs if there are no patters), a subroutine is invoked.  The address of
+       the subroutine is passed as the 1st parameter. The subroutine is
+       invoked exactly once for each matching UCB, regardless of how many
+       patterns it may match.
+
+OPTIONS
+       AUTHORS
+
+       John McKown
+          Author.
+
+COPYRIGHT
+       Copyright © 2012, HealthMarkets, Inc.
+
+
+
+z/OS UNIX Utilites from          January, 2012                     finducbs(3)

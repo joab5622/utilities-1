@@ -1,0 +1,67 @@
+.\"     Title: ams     
+.\"    Author: John McKown
+.\"      Date: 6 March 2012
+.\"
+.TH "ams" "1" "March, 2012" "z/OS UNIX Utilites from" "John McKown at HealthMarkets"                  
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+ams \- Invoke batch IDCAMS, redirecting input from stdin and output to stdout.
+.SH "SYNOPSIS"
+.sp
+.RS 3n
+.nf
+\fBams\fR                                     
+    
+.fi
+.RE
+.SH "DESCRIPTION"
+.PP
+The
+\fBams\fR     
+command attaches the IDCAMS program with a parameter list which invokes an 
+input routine to get its input and an output routine to print its output.
+.PP
+The input routine reads stdin (file descriptor 0). It sends individual lines delimited by an NEL
+character (0x15) as separate input records (with the NEL removed), to be processed by IDCAMS.
+.PP
+The output routine receives the output which normally goes to SYSPRINT. This routine
+adds an NEL (0x15) to the end of the line and writes it to stdout (file descriptor 1).
+.PP
+.SH "FILES"
+.PP
+\fBams\fR     
+ does not use any input or output files.                                                                                                              
+.SH "EXAMPLES"
+.SS "Local z/OS Examples"
+.TP 3n
+ams                                               
+Reads from the user's terminal and write to it.       
+.TP 3n
+ams <input.file                                        
+Uses redirection of stdin to read its commands from
+\fBinput.file\fR.
+Output goes to the user's terminal.
+.TP 3n
+ams <input.file >output.file                           
+Uses redirection of stdin to read its commands from
+\fBinput.file\fR and redirection of stdout to write
+its output to \fBoutput.file\fR.
+.TP 3n
+cat input.file1 input.file2 | ams
+Uses redirection of stdin from a pipe to read its commands from
+the \fBcat\fRenation of files \fBinput.file1\fR and \fBinput.file2\fR.
+.SH "SEE ALSO"
+.PP
+.SH "AUTHORS"
+.PP
+\fBJohn\fR \fBMcKown\fR
+.sp -1n
+.IP "" 3n
+Author.
+.PP
+.sp -1n
+.SH "COPYRIGHT"
+Copyright \(co 2012, HealthMarkets, Inc.

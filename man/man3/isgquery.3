@@ -1,0 +1,272 @@
+.\"     Title: isgquery
+.\"    Author: John McKown
+.\" Generator: DocBook XSL Stylesheets v1.70.0 <http://docbook.sf.net/>
+.\"      Date:
+.\"    Manual: 
+.\"    Source: 
+.\"
+.TH "isgquery" "1" "January, 2012" "z/OS UNIX Utilites from" "John McKown at HealthMarkets"           
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+isgquery \- one line description                          
+.SH "SYNOPSIS"
+.sp
+.RS 3n
+.nf
+\fBisgquery\fR [OPTION...] \fIdataset\-name\fR
+\fBisgquery\fR \fB\-sock\fR [OPTION...] \fIdataset\-name\fR
+\fBisgquery\fR \fB\-ssh\fR [ssh\-opt...] \fIuser@host\fR [OPTION...] \fIdataset\-name\fR
+\fBisgquery\fR \fB\-local\fR \fIdataset\-name\fR
+\fBisgquery\fR \fB\-v\fR
+\fBisgquery\fR \fB\-h\fR
+    
+.fi
+.RE
+.SH "DESCRIPTION"
+.PP
+The
+\fBisgquery\fR
+command reads a z/OS MVS dataset and writes a stream of data to stdout. Lines (if requested) are produced from dataset records based on the options provided.
+.PP
+The
+\fBisgquery\fR
+command runs in one of three environments:
+.TP 3n
+\(bu
+locally (default on z/OS sytems)
+.TP 3n
+\(bu
+remotely, from a client\-initiated ssh connection:
+\fB\-ssh\fR
+option
+.TP 3n
+\(bu
+remotely, from a client which was started by Co:Z launcher:
+\fB\-sock\fR
+(default option on non\-z/OS systems)
+.PP
+The user has wide flexibility in choosing:
+.TP 3n
+\(bu
+How
+\fIdataset\-name\fR
+is to be allocated/opened for writing
+.TP 3n
+\(bu
+How records are to be created from the incoming source lines
+.TP 3n
+\(bu
+What character set (codepage) translations are to be performed
+.PP
+\fIdataset\-name\fR
+is automatically converted to upper case, and is assumed to be fully qualified unless otherwise specified (see the
+\fB\-r\fR
+option below). If
+\fIdataset\-name\fR
+starts with 'DD:', then it refers to an existing DDNAME.
+.PP
+The isgquery command also supports reading JES spool files using special
+\fIdataset\-name\fR
+syntax:
+.TP 3n
+\(bu
+\fI\-JES.jobid\fR
+\- reads the concatenated spool files for a given job.
+.TP 3n
+\(bu
+\fI\-JES.jobid.dsid\fR
+\- reads a specific spool file by numerid dsid.
+.TP 3n
+\(bu
+\fI\-JES.jobid.[stepname[.procstep]ddame\fR
+\- reads the first spool file in a job that matches a step/procstep/ddname.
+.sp
+.RE
+.SH "OPTIONS"
+.TP 3n
+\fB\-sock\fR
+Specifies a remote invocation of
+\fBisgquery\fR
+from a client environment running under a Co:Z Agent. This is the default for non\-z/OS environments. If specified, this must be the first command option.
+.TP 3n
+\fB\-ssh\fR [ssh\-options...] \fIuser@host\fR
+Specifies a remote invocation of
+\fBisgquery\fR
+using a client\-initiated ssh connection to the given z/OS user@host. If specified, this must be the first command option.
+.TP 3n
+\fB\-local\fR
+Specifies the use of local z/OS I/O, even if run via CoZLauncher. If specified, this must be the first command option.
+.TP 3n
+\fB\-b\fR
+binary mode, same as
+\fB\-l\fR
+none
+\fB\-p\fR
+0x00.
+.TP 3n
+\fB\-h\fR
+display help and exit.
+.TP 3n
+\fB\-k\fR
+keep trailing pad characters in record. The default is to trim if
+\fIdataset\-name\fR
+has fixed length records.
+.TP 3n
+\fB\-K\fR
+always trim trailing pad characters, even if the dataset contains variable\-length records.
+.TP 3n
+\fB\-l\fR line\-separator
+\fBnl\fR
+|
+\fBcr\fR
+|
+\fBlf\fR
+|
+\fBcrlf\fR
+|
+\fBcrnl\fR
+.sp
+follow lines with a newline, carriage return, linefeed, or combination. The characters are taken from the target codepage. The default is
+\fBnl\fR.
+.sp
+\fBibmrdw\fR
+.sp
+preceed lines with a four byte IBM\-style RDW, consisting of a two byte network order (big endian) length, followed by two bytes of zeros.
+.sp
+\fBmfrdw\fR
+.sp
+Write a 128 byte MicroFocus standard header prior to output data. Preceed each line with a network order (big endian) length. If the maximum record length is < 4095 bytes, the length field is 2 bytes. If the maximum record length is >= 4095 bytes, the length field is 4 bytes. Each line is padded with zeros to the nearest 4 byte boundary.
+.sp
+\fBrdw\fR
+.sp
+preceed lines with a four byte network order (big endian) length.
+.sp
+\fB0xbb[bb..]\fR
+.sp
+follow lines with a hex character sequence. The sequence must be between 1 and 8 bytes long.
+.sp
+\fBnone\fR
+.sp
+no line separator
+.TP 3n
+\fB\-L\fR logging\-options
+A comma\-separated list of options to control logging and tracing:
+.sp
+\fBM\fR
+|
+\fBA\fR
+|
+\fBC\fR
+|
+\fBE\fR
+|
+\fBW\fR
+|
+\fBN\fR
+|
+\fBI\fR
+|
+\fBD\fR
+|
+\fBT\fR
+.sp
+Logging threshhold: eMergency, Alert, Critical, Error, Warning, Notice, Info (default), Debug, Trace.
+.sp
+\fBt\fR
+.sp
+Prefix log messages with a system timestamp
+.sp
+\fBe\fR
+.sp
+Include consumed cpu time in log messages
+.sp
+\fBs\fR
+.sp
+Messages are logged to SYSLOG facility instead of stderr
+.sp
+\fBlogname=M|A|C|E|W|N|I|D|T\fR
+.sp
+Set a specific log name to the given threshold
+.TP 3n
+\fB\-o\fR fopen\-options
+additional mode arguments to the z/OS C library fopen() routine. The base mode options used by
+\fBisgquery\fR
+to open
+\fIdataset\-name\fR
+are
+rb,type=record,noseek". See "z/OS C++ Programming Guide" for details.
+.TP 3n
+\fB\-p\fR 0xbb
+pad character.
+.TP 3n
+\fB\-r\fR 0xbb
+\fIdataset\-name\fR
+will be prefixed with the current z/OS userid.
+.TP 3n
+\fB\-s\fR source\-codepage
+The codepage name or numeric CCSID id of the input dataset. If not specified, then the default z/OS process codepage is used.
+.TP 3n
+\fB\-t\fR target\-codepage
+The codepage name or numeric CCSID id of data written to stdout. If not specified and invoked from a remote client with a line\- separater other than 'none', 'ibmrdw', 'mfrdw' or 'rdw', then the default client codepage is used, otherwise the default z/OS code\- page is used. Translation is disabled if source\-codepage equals target\-codepage.
+.TP 3n
+\fB\-v\fR
+display the current version and exit.
+.TP 3n
+\fB\-x\fR bpxwdyn\-alloc\-keywords
+can be specified to provide more precise control over the disposition of dataset\-name than the fopen\-options. For example, opening a dataset with fopen forces a disposition of 'OLD'. This may not always be desirable in a shared batch environment. The bpxwdyn keywords enable different dispostions to be specified (e.g 'SHR'). If
+\fIdataset\-name\fR
+is 'DD:name', then this option is ignored. For a complete list of options, see the IBM manual: "Using REXX and z/OS UNIX System Services".
+.SH "FILES"
+.PP
+\fBisgquery\fR
+may obtain name matched profile information for a dataset from either a per\-user profile or a system\-wide profile on the z/OS system. For well known
+\fIdataset\-name\fR
+patterns, profile options can be used to significantly reduce the specification of individual options on the command line. The file format and profile options are described in
+\fBdsn_profile\fR(5).
+.SH "EXAMPLES"
+.SS "Local z/OS Examples"
+.TP 3n
+isgquery mvs1.my.lib(member1) > /home/user/member1
+Copies an MVS dataset (PDS member) to an HFS/zFS file.
+.TP 3n
+isgquery \-x shr mvs1.input.dataset > /home/user/mydata
+Copies an MVS dataset using DISP=SHR.
+.TP 3n
+isgquery mvs1.input.dataset | todsn mvs1.output.dataset
+Copies one MVS dataset to another
+.TP 3n
+isgquery \-jes.job123 > job.out
+Copies all output from a job to an HFS/zFS file
+.TP 3n
+isgquery \-jes.j333.report.sysprint > report.txt
+Copies the output from a job's spool file to an HFS/zFS file
+.\" end of SS subsection "Local z/OS Examples"
+.SS "Remote Client SSH Connection Examples"
+.TP 3n
+isgquery \-ssh user@myzos2.com //mvs1.input.dataset > /tmp/data
+Downloads an MVS dataset over an SSH connection (Unix).
+.TP 3n
+isgquery \-ssh user@myzos2.com //mvs1.input.dataset > c:ata.txt
+Downloads an MVS dataset over an SSH connection (Windows).
+.TP 3n
+isgquery \-ssh \-p 2222 user@myzos2.com \-l rdw \-r //binary.dataset > /tmp/rdw.bin.data
+Downloads a MVS dataset over an SSH connection with addtional ssh options: (the dataset contains binary records which are prefixed with RDWs)
+.\" end of SS subsection "Remote Client SSH Connection Examples"
+.SH "SEE ALSO"
+.PP
+\fBothercmd\fR(1)
+.SH "AUTHORS"
+.PP
+\fBJohn\fR \fBMcKown\fR
+.sp -1n
+.IP "" 3n
+Author.
+.PP
+.sp -1n
+.IP "" 3n
+Author.
+.SH "COPYRIGHT"
+Copyright \(co 2012, HealthMarkets, Inc.

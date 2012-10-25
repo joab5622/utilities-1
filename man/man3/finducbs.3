@@ -1,0 +1,47 @@
+.\"     Title: finducbs
+.\"    Author: John McKown
+.\" Generator: DocBook XSL Stylesheets v1.70.0 <http://docbook.sf.net/>
+.\"      Date:
+.\"    Manual:
+.\"    Source:
+.\"
+.TH "finducbs" "3" "January, 2012" "z/OS UNIX Utilites from" "John McKown at HealthMarkets"
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+finducbs \- scan on-line DASD UCBs, invoking a user-supplied subroutine for each matching volume serial.
+.SH "SYNOPSIS"
+.sp
+\fBfinducbs (int *subroutine, u_int *userword, int *argc, int **argvl int **argv) \fR
+.br
+The first parameter passed is the address of a subroutine or NULL.
+.TP
+.RS 3n
+.nf
+.RE
+.SS The subroutine.
+\fBint subroutine(struct ucb *, struc dce *, struc cmtx *, u_int *userword)\fR
+The first parameter passed to \fBfinducbs\fR, if not \fINULL\fR i.e. 8
+bytes of x'00', is the address of an LE enabled subroutine.  The
+\fBfinducbs\fR routine passes a parameter list containing exactly four
+fullword entries to it.  The first fullword is the 31-bit address of
+the UCB which matched one or more of the patterns. The second is the
+address of the DCE for that device. The third is the address of the
+UCB extention for that UCB.  The fourth is the value of the second
+fullword passed to \fBfinducbs\fR.  If the return code from the
+subroutine is not zero, then \fBfinducbs\fR stop processing with a
+return code of 2 and the \fILE MODIFIER\fR field set to the
+subroutine's return code.
+.PP
+.RE
+.SH "AUTHORS"
+.PP
+\fBJohn\fR \fBMcKown\fR
+.sp -1n
+.IP "" 3n
+Author.
+.PP
+.SH "COPYRIGHT"
+Copyright \(co 2012, HealthMarkets, Inc.

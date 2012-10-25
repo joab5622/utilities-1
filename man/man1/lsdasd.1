@@ -1,0 +1,142 @@
+.\"     Title: lsdasd
+.\"    Author: John McKown
+.\"      Date: 06 March 2012
+.\"
+.TH "lsdasd" "1" "March, 2012" "z/OS UNIX Utilites from" "John McKown at HealthMarkets"
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+lsdasd \- list the device number and space on all on-line disk volumes.
+.SH "SYNOPSIS"
+.sp
+.RS 3n
+.nf
+\fBlsdasd\fR [\fIOPTION\fR]... [\fIVOLUME\fR]...
+
+.fi
+.RE
+.SH "DESCRIPTION"
+.PP
+The
+\fBlsdasd\fR
+command lists the volser, address, and space information about on-line DASD volumes.
+
+.PP
+The only \fIOPTION\fR currently implemented is \fB-d\fR. If this is
+specified, internal debugging information is written to \fIstderr\fR.
+.PP
+The \fIVOLUME\fR arguments can be a list of 6 character volume serials
+or \fIwild card\fR specifications. If there are no arguments, then the
+information on all on-line DISK volumes is listed.  The \fIwild
+card\fR characters are \fB?\fR, which matches exactly one character,
+and the \fI*\fR, which matches 0 or more characters. The \fB* \fR
+\fIwild card\fR matches the minimal sequence of characters unless it
+is the last character, in which case it matches the rest of the volume
+serial.
+.PP
+\fBNotes:
+.TP
+\fRSince z/OS volume serial numbers are always \fBUPPER\fR case, the
+\fIlsdasd\fR internally upper cases the \fIVOLUME\fR argument(s).
+.TP
+If any \fIVOLUME\fR argument is less than 6 characters, it is
+considered a prefix and an \fI*\fR is implicitly added as the last
+character. Unless the last character actually is an \fI*\fR.
+.PP
+The output is written out in the order returned by the \fBUCBSCAN\fR
+function in z/OS.  At the time of this writing, that was in descending
+order by device number.
+.PP
+The \fIwild card\fR matching is done by the \fBASAXWC\fR macro. This
+facility is not currently documented in the z/OS documentation. The
+only documentation available is in the macro itself, which resides in
+\fBSYS1.MODGEN\fR
+.PP
+Any given volume is listed only once, regardless of the how many times
+it matches one or more arguments.
+.PP
+.SH "EXAMPLES"
+.TP 3n
+lsdasd
+.TP 3n
+
+VOLSER  Addr    SMS Indicator   Extents Total Cylinders Total Tracks    Largest Extent in Cylinders     Largest Extent in Tracks        Cylinders on Device     Tracks Per Cylinder     Track Size
+I13RS1  0X2000  NONSMS          2       181             2721            154                             2312                            3339                    15                      58786
+MVSSP3  0X2001  NONSMS          0       0               0               0                               0                               3340                    15                      58786
+LIHTSE  0X2002  NONSMS          27      1055            15898           434                             6511                            3340                    15                      58786
+LIHTS5  0X2003  NONSMS          50      0               183             0                               12                              3340                    15                      58786
+SAPP03  0X2004  NONSMS          1       330             4950            330                             4950                            3340                    15                      58786
+HSM019  0X2005  NONSMS          76      1720            26296           732                             10999                           3340                    15                      58786
+HSM020  0X2006  NONSMS          95      2209            33714           1556                            23349                           3340                    15                      58786
+HSM021  0X2007  NONSMS          70      1921            29262           635                             9540                            3340                    15                      58786
+LOG001  0X2008  SMS             5       3135            47031           3036                            45540                           3339                    15                      58786
+.PP
+lsdasd i?7*
+.TP 3n
+
+VOLSER  Addr    SMS Indicator   Extents Total Cylinders Total Tracks    Largest Extent in Cylinders     Largest Extent in Tracks        Cylinders on Device     Tracks Per Cylinder     Track Size
+I27CAT  0X2170  NONSMS  4       0       13      0       6       3339    15      58786
+I27RS1  0X2171  NONSMS  11      200     3066    109     1644    3339    15      58786
+I27RS2  0X2172  NONSMS  1       0       9       0       9       3339    15      58786
+I27RS3  0X2173  NONSMS  3       868     13073   862     12942   3339    15      58786
+I27RS4  0X2174  NONSMS  1       1182    17740   1182    17740   3339    15      58786
+I27FS1  0X2175  NONSMS  1       3       45      3       45      3339    15      58786
+I27FS2  0X2176  NONSMS  2       509     7635    475     7125    3339    15      58786
+I27FS3  0X2177  NONSMS  1       69      1035    69      1035    3339    15      58786
+I17CAT  0X2BB0  NONSMS  4       0       41      0       14      3339    15      58786
+I17RS1  0X2BB1  NONSMS  1       51      765     51      765     3339    15      58786
+I17RS2  0X2BB2  NONSMS  0       0       0       0       0       3339    15      58786
+I17RS3  0X2BB3  NONSMS  1       807     12105   807     12105   3339    15      58786
+I17RS4  0X2BB4  NONSMS  1       0       10      0       10      3339    15      58786
+I17FS1  0X2BB5  NONSMS  1       3       45      3       45      3339    15      58786
+I17FS2  0X2BB6  NONSMS  1       509     7635    509     7635    3339    15      58786
+I17FS3  0X2BB7  NONSMS  1       54      810     54      810     3339    15      58786
+I07CAT  0X2FD0  NONSMS  7       1232    18533   663     9945    3339    15      58786
+I07RS1  0X2FD1  NONSMS  10      663     10015   282     4230    3339    15      58786
+I07RS2  0X2FD2  NONSMS  2       0       19      0       12      3339    15      58786
+I07RS3  0X2FD3  NONSMS  3       847     12713   847     12706   3339    15      58786
+I07FS1  0X2FD4  NONSMS  1       25      375     25      375     3339    15      58786
+I07FS2  0X2FD5  NONSMS  2       86      1290    85      1275    3339    15      58786
+I07FS3  0X2FD6  NONSMS  2       114     1727    107     1610    3339    15      58786
+I07DL1  0X2FD7  NONSMS  1       536     8051    536     8051    3339    15      58786
+I07DL2  0X2FD8  NONSMS  1       731     10967   731     10967   3339    15      58786
+I07DL3  0X2FD9  NONSMS  1       448     6730    448     6730    3339    15      58786
+I07DL4  0X2FDA  NONSMS  1       79      1199    79      1199    3339    15      58786
+I07SM1  0X2FDB  NONSMS  4       8       149     8       134     3339    15      58786
+I07SM2  0X2FDC  NONSMS  4       72      1111    36      554     3339    15      58786
+I07SM3  0X2FDD  NONSMS  2       19      302     19      294     3339    15      58786
+I07SM4  0X2FDE  NONSMS  1       220     3306    220     3306    3339    15      58786
+I07RS4  0X2FDF  NONSMS  1       286     4300    286     4300    3339    15      58786
+.SS "Exit Status"
+.TP
+0
+if OK
+.TP
+1
+if no volumes were listed.
+.TP
+3
+if some error code is invalid. This indicates a programming error.
+.TP
+4
+if any argument length address is NULL. This should not occur.
+.TP
+5
+if any argument's length is too small.
+.TP
+6
+if any argument value address is NULL. This should not occcur.
+.TP
+7
+if any argument value is too long.
+
+.SH "AUTHORS"
+.PP
+\fBJohn\fR \fBMcKown\fR
+.sp -1n
+.IP "" 3n
+Author.
+.SH "COPYRIGHT"
+Copyright \(co 2012, HealthMarkets, Inc.
