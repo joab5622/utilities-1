@@ -2,7 +2,7 @@
 *PROCESS DXREF,FLAG(ALIGN,CONT,RECORD)
 *PROCESS NOFOLD,NOINFO,PC(ON,DATA,GEN,MCALL),RENT,
 *PROCESS RA2,NORLD,MXREF,RXREF,USING(MAP,WARN(13))
-*PROCESS TYPECHECK(MAGNITUDE,REGISTER)
+*PROCESS TYPECHECK(NOMAGNITUDE,REGISTER)
 *WARNING - THIS PROGRAM REQUIRES THE HIGH-LEVEL ASSEMBLER
 *          AS WELL AS LE/370
 *          THIS PROGRAM IS RE-ENTRANT.
@@ -27,6 +27,9 @@ GOBACK   DS    0H
 GO       DS    0H
          LR    R9_32,R1_32        SAVE R1 UPON ENTRY
          USING PARMS,R9_32
+         LARL  R15_32,DO_OCTAL
+         LARL  R15_32,DO_HEX  
+         ST    R15_32,ENCODE@
          LA    R1_32,CALLX
          L     R15_32,CEE3INF
          CALL  (15),(SYS,ENV,MEMBER,GPID,FC),VL,                       X
@@ -34,9 +37,8 @@ GO       DS    0H
          LHI   R15_32,1
          ST    R15_32,MODIFIER
          LHI   R7_32,16 
-         ST    R7_32,RETURN_CODE 
          TM    SYS,X'02'          UNIX?
-         JNO   GOBACK             NO
+         JNO   INITERR            NO
          LOAD  EP=BPX1WRT
          ST    R0_32,BPX1WRT
          LOAD  EP=BPX1WRV
@@ -48,54 +50,46 @@ GO       DS    0H
          LHI   R0_32,1
          ST    R0_32,TABL
          BCTR  R7_32,0            15
-         ST    R7_32,RETURN_CODE
          L     R2_32,@ARGC
          L     R3_32,@ARGVL
          L     R4_32,@ARGV
          ST    R2_32,MODIFIER
          L     R2_32,0(,R2_32)
          CHI   R2_32,3
-         JH    GOBACK
+         JH    INITERR
          BCTR  R7_32,0            14
-         ST    R7_32,RETURN_CODE
          CHI   R2_32,2
-         JL    GOBACK
+         JL    INITERR
          BCTR  R7_32,0            13
-         ST    R7_32,RETURN_CODE
          L     R6_32,4(,R4_32)    &ARGV[1]
          LT    R5_32,4(,R3_32)    &LENGTH OF ARG[1]
-         JZ    GOBACK             ZERO IS NOT GOOD
+         JZ    INITERR            ZERO IS NOT GOOD
          BCTR  R7_32,0            12
-         ST    R7_32,RETURN_CODE
          LT    R5_32,0(,R5_32)    LENGTH OF ARG[1]
-         JZ    GOBACK             ZERO IS NOT GOOD
+         JZ    INITERR            ZERO IS NOT GOOD
          BCTR  R7_32,0            11
-         ST    R7_32,RETURN_CODE
          BCTR  R5_32,0            DON'T COUNT TRAILING NULL
          LTR   R5_32,R5_32        BETTER HAVE SOME ACTUAL DATA!
-         JZ    GOBACK             ZERO IS NOT GOOD
+         JZ    INITERR            ZERO IS NOT GOOD
          MVC   QNAME,=CL8'SYSDSN'
          CHI   R2_32,2            ONLY RNAME SPECIFIED?
          JE    DORNAME            YES
          BCTR  R7_32,0            10
-         ST    R7_32,RETURN_CODE
          CHI   R5_32,8            MAX OF 8
-         JH    GOBACK             BUT IT ISN'T
+         JH    INITERR            BUT IT ISN'T
          BCTR  R5_32,0
          MVC   QNAME,=CL8' '
          EX    R5_32,CP_QNAME
          L     R6_32,8(,R4_32)    &ARGV[2]          
          LT    R5_32,8(,R3_32)    &LENGTH OF &ARGV[2]
-         JZ    GOBACK             CAN'T BE ZERO!
+         JZ    INITERR            CAN'T BE ZERO!
          BCTR  R7_32,0            9 
-         ST    R7_32,RETURN_CODE
          LT    R5_32,0(,R5_32)    LENGTH OF ARG[2]
-         JZ    GOBACK             ZERO IS NOT GOOD
+         JZ    INITERR            ZERO IS NOT GOOD
          BCTR  R7_32,0            8
-         ST    R7_32,RETURN_CODE
          BCTR  R5_32,0            DON'T COUNT TRAILING NULL
          LTR   R5_32,R5_32        BETTER HAVE SOME ACTUAL DATA!
-         JZ    GOBACK             ZERO IS NOT GOOD
+         JZ    INITERR            ZERO IS NOT GOOD
 DORNAME  DS    0H
 *
 * AT THIS POINT R6 POINTS TO EITHER ARGV[1] OR
@@ -104,9 +98,8 @@ DORNAME  DS    0H
 * IF ARGC==2, THEN R6=&ARGV[1] R5=ARGVL[1]
 * IF ARGC==3, THEN R6=&ARGV[2] R5=ARGVL[2]
          CHI   R5_32,255          CHECK AGAINST MAX LENGTH
-         JH    GOBACK             TOO LONG
+         JH    INITERR            TOO LONG
          BCTR  R7_32,0            7
-         ST    R7_32,RETURN_CODE
          ST    R5_32,RNAME_LEN
          BCTR  R5_32,0            DECREMENT BY 1
          EX    R5_32,CP_RNAME
@@ -132,7 +125,7 @@ OK1      DS    0H
          LHI   R9_32,8
          LA    R10_32,QNAME
 *        AGO   .DOWRT1
-         BRASL R14_32,DO_OCTAL
+         BRASL R14_32,DO_ENCODE
          SL    R8_32,FIELD1@
          ST    R8_32,FIELD1L
          chi   r8_32,8*4
@@ -148,7 +141,7 @@ OK1      DS    0H
          ST    R8_32,FIELD2@
          L     R9_32,RNAME_LEN
          LA    R10_32,RNAME
-         BRASL R14_32,DO_OCTAL
+         BRASL R14_32,DO_ENCODE
          SL    R8_32,FIELD2@
          ST    R8_32,FIELD2L
          chi   r8_32,255*4
@@ -222,7 +215,6 @@ ERROR1   DS    0H
          L     R15_32,SPRINTF
          CALL  (15),                                                   X
                ((2),FORMAT,(3),(4)),                                   X
-               VL,                                                     X
                MF=(E,(1))
          ST    R15_32,COUNT
          L     R15_32,BPX1WRT
@@ -261,7 +253,7 @@ PRINT    DS    0H
          ST    R8_32,FIELD1@
          LHI   R9_32,8
          LA    R10_32,RTN_QNAME
-         BRASL R14_32,DO_OCTAL
+         BRASL R14_32,DO_ENCODE
          LHI   R0_32,8
          SL    R8_32,FIELD1@
          ST    R8_32,FIELD1L
@@ -299,7 +291,7 @@ PRINT    DS    0H
          ST    R8_32,FIELD2@
          L     R9_32,RTN_RLEN
          LA    R10_32,RTN_RNAME
-         BRASL R14_32,DO_OCTAL
+         BRASL R14_32,DO_ENCODE
          LHI   R0_32,8
          SL    R8_32,FIELD2@
          ST    R8_32,FIELD2L
@@ -346,32 +338,95 @@ GOOD2    DS    0H
 NOFREE   DS    0H
          SLR   R15_32,R15_32
          J     GOBACK
+INITERR  DS    0H
+         ST    R7_32,RETURN_CODE
+         CHI   R7_32,16           NOT UNIX?
+         JNE   BADPARMS           BAD PARMS
+* I CAN'T ISSUE A MESSAGE, SO I GUESS A WTO IS NEEDED
+         WTO   'LSENQ NEEDS A UNIX ENVIRONMENT',                       X
+               ROUTCDE=11,                                             X
+               DESC=7
+BADPARMS DS    0H
+         LA    R2_32,ERRMSG1                          
+         ST    R2_32,BUFFERA      MESSAGE HERE
+         LA    R1_32,CALLX
+         L     R15_32,SPRINTF
+*
+* Use sprintf to make a nice looking message.
+         CALL  (15),                                                   X
+               ((2),ERRFMT1,(7)),                                      X
+               MF=(E,(1))
+         ST    R15_32,COUNT
+         L     R15_32,BPX1WRT
+         LA    R1_32,CALLX
+         CALL  (15),(FD2,BUFFERA,ALET,COUNT,                           X
+               RETVAL,                                                 X
+               RETCODE,                                                X
+               RSNCODE),VL,                                            X
+               MF=(E,(1))
+         J     GOBACK
+DO_ENCODE DS   0H
+         L     R15_32,ENCODE@
+         BR    R15_32
+DO_HEX   DS    0H
+         STM   R14_32,R12_32,12(R13_32)
+         CHI   R9_32,255
+         JH    *+2
+         LA    R1_32,PRNTABLE     POINT TO PRINT TABLE
+         SLR   R0_32,R0_32        TEST CHAR IS X'00'
+H_TROO   TROO  R8_32,R10_32,0     MOVE AND TEST
+         JO    H_TROO             LOOP ON CC=3
+         JE    H_TROOE            FINISHED!
+*
+* TRANSLATE TO HEXADECIMAL
+*        LHI   R3_32,C'\x'
+*        STH   R3_32,0(R8_32)
+         MVC   0(3,R8_32),=C'\0x'
+         SLR   R3_32,R3_32
+         UNPK  3(3,R8_32),0(2,R10_32)
+         TR    3(2,R8_32),TOHEX-240
+         LA    R10_32,1(,R10_32)
+         LA    R8_32,5(,R8_32)
+         LA    R1_32,PRNTABLE
+         BCTR  R9_32,0
+         LTR   R9_32,R9_32
+         JP    H_TROO
+H_TROOE  DS    0H
+         ST    R8_32,8*4+20(,R13_32)
+         LM    R14_32,R12_32,12(R13_32) 
+         BR    R14_32
 DO_OCTAL DS    0H
          STM   R14_32,R12_32,12(R13_32)
          CHI   R9_32,255
          JH    *+2
          LA    R1_32,PRNTABLE     POINT TO PRINT TABLE
          SLR   R0_32,R0_32        TEST CHAR IS X'00'
-TROO     TROO  R8_32,R10_32,0     MOVE AND TEST
-         JO    TROO               LOOP ON CC=3
-         JE    TROOE              FINISHED!
+O_TROO   TROO  R8_32,R10_32,0     MOVE AND TEST
+         JO    O_TROO             LOOP ON CC=3
+         JE    O_TROOE            FINISHED!
 *
 * TRANSLATE TO OCTAL
          SLR   R3_32,R3_32
          IC    R3_32,0(,R10_32)   LOAD BYTE
          MVI   0(R8_32),C'\'      PLACE ESCAPE CHAR IN OUTPUT
-*        STC   R3_32,0(R8_32)     temp
-         LA    R4_32,0(R3_32,R3_32)
-         ALR   R3_32,R4_32
-         LA    R3_32,OCTAL(R3_32)
-         MVC   1(3,R8_32),0(R3_32) 
+         STC   R3_32,3(,R8_32)
+         NI    3(R8_32),X'07'
+         OI    3(R8_32),X'F0'
+         SRL   R3_32,3
+         STC   R3_32,2(,R8_32)
+         NI    2(R8_32),X'07'
+         OI    2(R8_32),X'F0'
+         SRL   R3_32,3
+         STC   R3_32,1(,R8_32)
+         NI    1(R8_32),X'07'
+         OI    1(R8_32),X'F0'
          LA    R10_32,1(,R10_32)
          LA    R8_32,4(,R8_32)
          LA    R1_32,PRNTABLE
          BCTR  R9_32,0
          LTR   R9_32,R9_32
-         JP    TROO
-TROOE    DS    0H
+         JP    O_TROO
+O_TROOE  DS    0H
          ST    R8_32,8*4+20(,R13_32)
          LM    R14_32,R12_32,12(R13_32) 
          BR    R14_32
@@ -390,6 +445,7 @@ CP_RNAME MVC   RNAME(0),0(R6_32)
 TR_RNAME TR    RNAME(0),TOUPPER
 TOHEX    DC    C'0123456789ABCDEF'
 FORMAT   DC    C'ISGQUERY Return code=%i Modifier=%#8x',X'1500'
+ERRFMT1  DC    C'LSENQ Parameter error. code=%i',X'1500'
 NL       DC    X'15'
 TITLE    DC    CL80'LSENQ DUMP'   
 OPTIONS  DC    CL255'BLOCKS,STORAGE,REGST(256),GENOPTS' 
@@ -408,20 +464,6 @@ PRNTABLE PRNTABLE 0123456789
 PRNTABLE PRNTABLE -_.+=()@#$
 *        ORG   PRNTABLE+C' '
 *        DC    C' '
-         ORG
-OCTAL    DS    256CL3
-         LCLA  &A,&A1,&A2,&A3
-&A       SETA  0
-         ORG   OCTAL
-.OCTAL   ANOP
-&A1      SETA  (&A AND 7)
-&A2      SETA  (&A SRL 3)
-&A2      SETA  (&A2 AND 7)     
-&A3      SETA  (&A SRL 6)
-&A3      SETA  (&A3 AND 7)      
-         DC    CL3'&A3&A2&A1'
-&A       SETA  &A+1  
-         AIF   (&A LE 255).OCTAL
          ORG
          ISGQUERY MF=(L,GQPARM)                                         
          LTORG *
@@ -442,12 +484,13 @@ LSENQ_PPA CEEPPA LIBRARY=NO,                                           X
 * DYNAMIC AREA IS DEFINED HERE.
 * THIS IS WITHIN A DSECT, SO NO DATA IS REALLY INITIALIZED
          DS    0D                 FORCE DOUBLEWORD
+NL_CATD  DS    A
+ENCODE@  DS    A
 D_RC     DS    D
 D_MODIFIER DS  D
 F_RC     DS    F
 F_MODIFIER DS  F
 RETURN@  DS    A
-RET@     DS    A
 GQLST    DS    (GQPARML)X
 BPX1WRT  DC    A(0)               DYNAMICALLY LOADED
 BPX1WRV  DC    A(0)               DYNAMICALLY LOADED
@@ -456,6 +499,8 @@ BUFFERA  DS    A
 RETVAL   DS    A(0)
 RETCODE  DS    A(0)
 RSNCODE  DS    A(0)
+QNAME@   DS    A
+RNAME@   DS    A
 SYS      DS    F
 * BIT MEANING
 *    0 X'80'
@@ -509,8 +554,11 @@ TAB@     DS    A
 TABL     DS    F
 QNAME    DS    CL8
 RNAME    DS    CL255
-QNAMEX   DS    4CL(L'QNAME)
-RNAMEX   DS    4CL(L'RNAME)
+QNAMEX   DS    6CL(L'QNAME)
+RNAMEX   DS    6CL(L'RNAME)
+         ORG   QNAME
+ERRMSG1  DS    CL(20+L'ERRFMT1)
+         ORG
 IOV_STRUC DS   0D
 FIELD1@  DS    A
 FIELD1L  DS    F
