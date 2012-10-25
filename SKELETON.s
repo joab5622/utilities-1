@@ -23,6 +23,7 @@ SKELETON CEEENTRY PPA=SKELETON_PPA,
                MAIN=YES,
                AUTO=DSASIZE,
                BASE=R11_32
+SKELETON ALIAS C'skeleton'
          USING CEECAA,R12_32
          USING CEEDSA,R13_32
          J     GO

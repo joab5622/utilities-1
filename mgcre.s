@@ -39,6 +39,7 @@ NOFREE   DS    0H
 GO       DS    0H
          LR    R10_32,R1_32       SAVE R1 UPON ENTRY
          USING PARMS,R10_32
+         TDFHOOK
          XC    IOV@,IOV@
          XC    IOVL,IOVL
          TESTAUTH FCTN=1          APF AUTHORIZED?
