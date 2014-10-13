@@ -1,0 +1,46 @@
+.\"     Title: template
+.\"    Author: John McKown
+.\"      Date:
+.\"    Manual:
+.\"    Source:
+.\"
+.TH "template" "3" "May, 2012" "z/OS UNIX Utilites from" "John McKown at HealthMarkets"
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.SH "NAME"
+template \- One line description
+.SH "SYNOPSIS"
+\fBtemplate (.. parameters ..) \fR
+.SS Parameters
+The first parameter passed is 
+.IP
+If the first parameter passed to \fBtemplate\fR is not \fINULL\fR ( 4
+bytes of x'00'), then it is the address of an LE enabled subroutine.  The
+\fBtemplate\fR routine passes a parameter list containing exactly four
+fullword entries to it (see below). 
+.IP
+If the first parameter is NULL, then \fBtemplate\fR will return with a return code of -1 and 
+with its entry point address returned in the 32 bit GPR0, also known as the LE MODIFIER field.
+I do this because I cannot figure out how to get the address of a subroutine in a DLL. I often need this
+in order to pass it to other routines so that they can indirectly call it. I have not found a
+way to get this information into other languages using standard methods. In C/C++, it should
+be possible by using \fBinline assembler\fR directly after invoking the subroutine.
+.PP
+The second parameter
+.SS Subsidairy topic
+\fBSingle line in bold to describe\fR
+.br
+More in depth explanation.
+.PP
+Note 
+.SH "AUTHORS"
+.PP
+\fBJohn\fR \fBMcKown\fR
+.sp -1n
+.IP "" 3n
+Author.
+.PP
+.SH "COPYRIGHT"
+Copyright \(co 2012, HealthMarkets, Inc.
